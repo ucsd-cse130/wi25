@@ -8,7 +8,7 @@ headerImg: sea.jpg
 There is **no text** for CSE 130. We will be using the
 lecture notes, and other course materials such as aticles,
 web sites, tutorials, etc. will be made available on
-this site as appropriate.  
+this site as appropriate.
 
 Below you can find a list of books and online resources
 that explore various class topics in more depth.
@@ -42,7 +42,7 @@ that explore various class topics in more depth.
 
 ### IDE Support
 
-- I recommend [VSCode](https://github.com/haskell/haskell-language-server#visual-studio-code)
+- I **strongly** recommend [VSCode](https://github.com/haskell/haskell-language-server#visual-studio-code)
 - Other editors [Emacs, Vim etc.](https://github.com/haskell/haskell-language-server#configuring-your-editor)
 
 ## Prolog

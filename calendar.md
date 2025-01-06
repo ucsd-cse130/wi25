@@ -9,10 +9,12 @@ See CANVAS calendar for details
 
 ## Calendar
 
-| **Event**    | **Day**  | **Time**     |
-|:-------------|:---------|:-------------|
-| *Lectures*   |  Tu-Th   | 12:30-1:50pm |
-| *Section*    |  Fri     |  3:00-3:50pm |
-| *Midterm I*  |  Tu 1/30 | 12:30-1:50pm |
-| *Midterm II* |  Th 2/22 | 12:30-1:50pm |
-| *Final*      |  Tu 3/19 | 11:30-2:30pm |
+All of the below are in **Pepper Canyon 106**
+
+| **Event**    | **Day** | **Time**     |
+| :----------- | :------ | :----------- |
+| _Lectures_   | Tu-Th   | 9:30-10:50pm |
+| _Section_    | Fri     | 3:00-3:50pm  |
+| _Midterm I_  | Tu 1/28 | 9:30-10:50pm |
+| _Midterm II_ | Th 2/20 | 9:30-10:50pm |
+| _Final_      | Tu 3/18 | 8:00-11:00am |

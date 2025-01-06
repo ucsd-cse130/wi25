@@ -1,15 +1,14 @@
 # 130-web
 
-
-Public course materials for [UCSD CSE 130: Winter 2024](https://ucsd-cse130.github.io/wi24/)
+Public course materials for [UCSD CSE 130: Winter 2025](https://ucsd-cse130.github.io/wi25/)
 
 ## Install
 
 You too, can build this webpage locally, like so:
 
 ```bash
-git clone git@github.com:ucsd-cse130/wi24.git
-cd wi24
+git clone git@github.com:ucsd-cse130/wi25.git
+cd wi25
 make
 ```
 
@@ -52,7 +51,7 @@ git push origin main
 
 ## To build Lecture Versions
 
-To build the "lecture" version of all the html i.e. *without*
+To build the "lecture" version of all the html i.e. _without_
 the answers to quizzes and other questions, replace the
 following in `Site.hs`
 
@@ -82,16 +81,15 @@ match "lectures/*"    $ crunchWithCtxCustom "lecture" postCtx
 - [+] links.md
 - [+] contact.md
 - [+] lectures.md
-- [+] calendar.md
 - [+] grades.md
+- [+] calendar.md
 - [+] assignments.md
 - [+] piazza
+- [+] canvas
+- [+] github registration form
+- [+] 00-lambda
 
-- [ ] canvas
-- [ ] github registration form
-- [ ] clicker registration form
-- [ ] 00-lambda
-
+* [-] clicker registration form
 * [-] groups
 * [-] seating chart
 

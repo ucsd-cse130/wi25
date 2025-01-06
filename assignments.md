@@ -5,8 +5,8 @@ headerImg: angles.jpg
 
 ## Late Policy
 
-You have a total of *six late days* that you can use throughout the quarter,
-but no more than *four late days* per assignment.
+You have a total of _six late days_ that you can use throughout the quarter,
+but no more than _four late days_ per assignment.
 
 - A late day means anything between 1 second and 23
   hours 59 minutes and 59 seconds past a deadline
@@ -15,14 +15,22 @@ but no more than *four late days* per assignment.
 
 ## Assignments
 
-| **HW-link**                                      | **Name**                |  **Deadline (23:59:59pm)** |
-|:-------------------------------------------------|:------------------------|:---------------------------|
-| [HW #0](https://classroom.github.com/a/_34d4Uv5) | Lambda Calculus         | Wed 1/24                   |
+Fill in [this form](https://forms.gle/bVR7pfs5ajexNMr67) by **Fri 1/17**
+so we can link your github and UCSD IDs. Otherwise **you will get `0`**
+for the programming assignments!
+
+| **HW-link**                                      | **Name**        | **Deadline (23:59:59pm)** |
+| :----------------------------------------------- | :-------------- | :------------------------ |
+| [HW #00](https://forms.gle/bVR7pfs5ajexNMr67)    | Github ID       | Fri 1/17                  |
+| [HW #0](https://classroom.github.com/a/Swy1OtKG) | Lambda Calculus | Wed 1/22                  |
+
+<!--
 | [HW #1](https://classroom.github.com/a/HxgZyrDP) | Introduction to Haskell | Wed 2/7                    |
 | [HW #2](https://classroom.github.com/a/QN5MJP8I) | Data types              | Fri 2/16                   |
 | [HW #3](https://classroom.github.com/a/MwGq0b-E) | Higher-order Functions  | Fri 3/1                    |
 | [HW #4](https://classroom.github.com/a/Nt-8s65U) | Interpreters            | Fri 3/15                   |
 | [HW #5](https://classroom.github.com/a/V1FEBmmq) | Classes                 | Fri 3/22                   |
+--->
 
 ## Sample Exam Questions
 
@@ -36,7 +44,7 @@ for a comparison between the two languages.
 
 - [Midterm Sp 14](/static/raw/midterm-sp14.pdf), ocaml code ported to [haskell](/static/raw/MidtermSp14.hs)
 
--  [Midterm Sp 12](/static/raw/midterm-sp12.pdf), [Midterm Wi 12](/static/raw/midterm-wi12.pdf).
+- [Midterm Sp 12](/static/raw/midterm-sp12.pdf), [Midterm Wi 12](/static/raw/midterm-wi12.pdf).
 
 - [Final Sp 18](/static/raw/130-final-sp18.pdf) ([solution](/static/raw/130-final-sp18-solution.pdf)),
   [Final Sp 14](/static/raw/final-sp14.pdf),
