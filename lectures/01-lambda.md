@@ -7,17 +7,17 @@ headerImg: sea.jpg
 
 Probably has lots of features:
 
-* Assignment (`x = x + 1`)
-* Booleans, integers, characters, strings, ...
-* Conditionals
-* Loops
-* `return`, `break`, `continue`
-* Functions
-* Recursion
-* References / pointers
-* Objects and classes
-* Inheritance
-* ...
+- Assignment (`x = x + 1`)
+- Booleans, integers, characters, strings, ...
+- Conditionals
+- Loops
+- `return`, `break`, `continue`
+- Functions
+- Recursion
+- References / pointers
+- Objects and classes
+- Inheritance
+- ...
 
 Which ones can we do without?
 
@@ -48,7 +48,6 @@ What is the **smallest universal language**?
 Informal notion of an **effectively calculable** function:
 
 ![can be computed by a human with pen and paper, following an algorithm](https://oercommons.s3.amazonaws.com/media/courseware/assets/G06/06-math-math-06-9780328761197-math-9780328761197-ah-studio-images-ip3-mth-6-2-8-2-1_mw-4x3_dividehandwritten-ip3.png){#fig:pen-and-paper .align-center width=40%}
-
 
 <br>
 <br>
@@ -99,7 +98,6 @@ What is the **smallest universal language**?
 
 Peter Landin, 1966
 
-
 <br>
 <br>
 <br>
@@ -119,7 +117,7 @@ Peter Landin, 1966
 
 Has one feature:
 
-* Functions
+- Functions
 
 <br>
 <br>
@@ -132,19 +130,19 @@ Has one feature:
 <br>
 <br>
 
-No, *really*
+No, _really_
 
-* ~~Assignment (`x = x + 1`)~~
-* ~~Booleans, integers, characters, strings, ...~~
-* ~~Conditionals~~
-* ~~Loops~~
-* ~~`return`, `break`, `continue`~~
-* Functions
-* ~~Recursion~~
-* ~~References / pointers~~
-* ~~Objects and classes~~
-* ~~Inheritance~~
-* ~~Reflection~~
+- ~~Assignment (`x = x + 1`)~~
+- ~~Booleans, integers, characters, strings, ...~~
+- ~~Conditionals~~
+- ~~Loops~~
+- ~~`return`, `break`, `continue`~~
+- Functions
+- ~~Recursion~~
+- ~~References / pointers~~
+- ~~Objects and classes~~
+- ~~Inheritance~~
+- ~~Reflection~~
 
 <br>
 <br>
@@ -157,10 +155,10 @@ No, *really*
 <br>
 <br>
 
-More precisely, *only thing* you can do is:
+More precisely, _only thing_ you can do is:
 
-* **Define** a function
-* **Call** a function
+- **Define** a function
+- **Call** a function
 
 <br>
 <br>
@@ -175,9 +173,9 @@ More precisely, *only thing* you can do is:
 
 ## Describing a Programming Language
 
-* _Syntax:_ what do programs look like?
-* _Semantics:_ what do programs mean?
-    * _Operational semantics_: how do programs execute step-by-step?
+- _Syntax:_ what do programs look like?
+- _Semantics:_ what do programs mean?
+  - _Operational semantics_: how do programs execute step-by-step?
 
 <br>
 <br>
@@ -206,15 +204,15 @@ Programs are **expressions** `e` (also called **$\lambda$-terms**)
 of one of three kinds:
 
 - **Variable**
-    - `x`, `y`, `z`
+  - `x`, `y`, `z`
 - **Abstraction** (aka _nameless_ function definition)
-    - `(\x -> e)`
-    - `x` is the _formal_ parameter, `e` is the _body_
-    - "for any `x` compute `e`"
+  - `(\x -> e)`
+  - `x` is the _formal_ parameter, `e` is the _body_
+  - "for any `x` compute `e`"
 - **Application** (aka function call)
-    - `(e1 e2)`
-    - `e1` is the _function_, `e2` is the _argument_
-    - in your favorite language: `e1(e2)`
+  - `(e1 e2)`
+  - `e1` is the _function_, `e2` is the _argument_
+  - in your favorite language: `e1(e2)`
 
 (Here each of `e`, `e1`, `e2` can itself be a variable, abstraction, or application)
 
@@ -252,28 +250,25 @@ of one of three kinds:
 <br>
 <br>
 
-
 ## QUIZ
 
 Which of the following terms are syntactically **incorrect**?
 
-**A.**  `(\(\x -> x) -> y)`
+**A.** `(\(\x -> x) -> y)`
 
-**B.**  `(\x -> (x x))`
+**B.** `(\x -> (x x))`
 
-**C.**  `(\x -> (x (y x)))`
+**C.** `(\x -> (x (y x)))`
 
-**D.**  A and C
+**D.** A and C
 
-**E.**  all of the above
+**E.** all of the above
 
 <br>
 
 (I) final
 
     _Correct answer:_ **A**
-
-
 
 <br>
 <br>
@@ -300,7 +295,7 @@ Which of the following terms are syntactically **incorrect**?
 
 How do I define a function with two arguments?
 
-* e.g. a function that takes `x` and `y` and returns `y`?
+- e.g. a function that takes `x` and `y` and returns `y`?
 
 <br>
 <br>
@@ -336,7 +331,7 @@ How do I define a function with two arguments?
 
 How do I apply a function to two arguments?
 
-* e.g. apply `(\x -> (\y -> y))` to `apple` and `banana`?
+- e.g. apply `(\x -> (\y -> y))` to `apple` and `banana`?
 
 <br>
 <br>
@@ -356,7 +351,6 @@ How do I apply a function to two arguments?
                                    -- then apply the result to banana
 ```
 
-
 <br>
 <br>
 <br>
@@ -368,20 +362,17 @@ How do I apply a function to two arguments?
 <br>
 <br>
 <br>
-
-
-
 
 ## Syntactic Sugar
 
 <br>
 <br>
 
-instead of                |  we write
-:-------------------------|:-------------------------
-`\x -> (\y -> (\z -> e))` | `\x -> \y -> \z -> e`
-`\x -> \y -> \z -> e`     | `\x y z -> e`
-`(((e1 e2) e3) e4)`       |  `e1 e2 e3 e4`
+| instead of                | we write              |
+| :------------------------ | :-------------------- |
+| `\x -> (\y -> (\z -> e))` | `\x -> \y -> \z -> e` |
+| `\x -> \y -> \z -> e`     | `\x y z -> e`         |
+| `(((e1 e2) e3) e4)`       | `e1 e2 e3 e4`         |
 
 <br>
 <br>
@@ -432,8 +423,8 @@ Think of middle-school algebra:
 
 **Execute** = rewrite step-by-step
 
-- Following simple *rules*
-- until no more rules *apply*
+- Following simple _rules_
+- until no more rules _apply_
 
 <br>
 <br>
@@ -452,8 +443,8 @@ Think of middle-school algebra:
 
 <br>
 
-1. $\beta$-step   (aka _function call_)
-2. $\alpha$-step  (aka _renaming formals_)
+1. $\beta$-step (aka _function call_)
+2. $\alpha$-step (aka _renaming formals_)
 
 <br>
 
@@ -505,8 +496,6 @@ For example, `x` is free in:
                          -- intuition: it's not "the same" x
 ```
 
-
-
 <br>
 <br>
 <br>
@@ -523,13 +512,13 @@ For example, `x` is free in:
 
 Is `x` _bound_ or _free_ in the expression `((\x -> x) x)`?
 
-**A.**  first occurrence is bound, second is bound
+**A.** first occurrence is bound, second is bound
 
-**B.**  first occurrence is bound, second is free
+**B.** first occurrence is bound, second is free
 
-**C.**  first occurrence is free, second is bound
+**C.** first occurrence is free, second is bound
 
-**D.**  first occurrence is free, second is free
+**D.** first occurrence is free, second is free
 
 <br>
 
@@ -549,13 +538,11 @@ Is `x` _bound_ or _free_ in the expression `((\x -> x) x)`?
 <br>
 <br>
 
-
 ## EXERCISE: Free Variables
 
-An variable `x` is **free** in `e` if *there exists* a free occurrence of `x` in `e`
+An variable `x` is **free** in `e` if _there exists_ a free occurrence of `x` in `e`
 
 <br>
-
 
 We can formally define the set of _all free variables_ in a term like so:
 
@@ -587,7 +574,6 @@ We can formally define the set of _all free variables_ in a term like so:
 <br>
 <br>
 <br>
-
 
 ## Closed Expressions
 
@@ -621,8 +607,8 @@ What is the shortest closed expression?
 
 <br>
 
-1. $\beta$-step   (aka _function call_)
-2. $\alpha$-step  (aka _renaming formals_)
+1. $\beta$-step (aka _function call_)
+2. $\alpha$-step (aka _renaming formals_)
 
 <br>
 <br>
@@ -647,15 +633,14 @@ A **redex** is a term of the form
   ((\x -> e1) e2)
 ```
 
-A *function* `(\x -> e1)`
+A _function_ `(\x -> e1)`
 
+- `x` is the _parameter_
+- `e1` is the _returned_ expression
 
-- `x` is the *parameter*
-- `e1` is the *returned* expression
+_Applied to_ an argument `e2`
 
-*Applied to* an argument `e2`
-
-- `e2` is the *argument*
+- `e2` is the _argument_
 
 <br>
 <br>
@@ -697,8 +682,6 @@ If you see an _abstraction_ applied to an _argument_,
 - Replace all _free occurrences_ of the _formal_ by that _argument_
 
 We say that `(\x -> e1) e2` $\beta$-steps to `e1[x := e2]`
-
-
 
 <br>
 <br>
@@ -758,7 +741,6 @@ Is this right? Ask [Elsa](https://goto.ucsd.edu/elsa/index.html)
 
 **E.** `\x -> y`
 
-
 <br>
 
 (I) final
@@ -806,8 +788,6 @@ Is this right? Ask [Elsa](https://goto.ucsd.edu/elsa/index.html)
 <br>
 <br>
 
-
-
 ## QUIZ
 
 <br>
@@ -828,7 +808,6 @@ Is this right? Ask [Elsa](https://goto.ucsd.edu/elsa/index.html)
 
 **E.** `(\x -> x)`
 
-
 <br>
 
 (I) final
@@ -846,7 +825,6 @@ Is this right? Ask [Elsa](https://goto.ucsd.edu/elsa/index.html)
 <br>
 <br>
 <br>
-
 
 ## EXERCISE
 
@@ -912,11 +890,11 @@ Is this right?
 
 Is this right?
 
-**Problem**: The *free* `y` in the argument has been **captured** by `\y` in *body*!
+**Problem**: The _free_ `y` in the argument has been **captured** by `\y` in _body_!
 
 <br>
 
-**Solution**: Ensure that *formals* in the body are **different from** *free-variables* of argument!
+**Solution**: Ensure that _formals_ in the body are **different from** _free-variables_ of argument!
 
 <br>
 <br>
@@ -937,11 +915,12 @@ We have to fix our definition of $\beta$-reduction:
 ```
   (\x -> e1) e2   =b>   e1[x := e2]
 ```
+
 <br>
 where `e1[x := e2]` means ~~"`e1` with all _free_ occurrences of `x` replaced with `e2`"~~
 
-  - `e1` with all _free_ occurrences of `x` replaced with `e2`
-  - **as long as** no free variables of `e2` get captured
+- `e1` with all _free_ occurrences of `x` replaced with `e2`
+- **as long as** no free variables of `e2` get captured
 
 <br>
 
@@ -960,9 +939,9 @@ y[x := e]            = y                 -- as x /= y
   | not (y in FV(e)) = \y -> e1[x := e]
 ```
 
-**Oops, but what to do if** `y` is in the *free-variables* of `e`?
+**Oops, but what to do if** `y` is in the _free-variables_ of `e`?
 
-  - i.e. if `\y -> ...` may *capture* those free variables?
+- i.e. if `\y -> ...` may _capture_ those free variables?
 
 (I) final
 
@@ -982,14 +961,12 @@ y[x := e]            = y                 -- as x /= y
 <br>
 <br>
 
-
-
 ## Rewrite Rules of Lambda Calculus
 
 <br>
 
-1. $\beta$-step   (aka _function call_)
-2. $\alpha$-step  (aka _renaming formals_)
+1. $\beta$-step (aka _function call_)
+2. $\alpha$-step (aka _renaming formals_)
 
 <br>
 <br>
@@ -1012,6 +989,7 @@ y[x := e]            = y                 -- as x /= y
   \x -> e   =a>   \y -> e[x := y]
     where not (y in FV(e))
 ```
+
 <br>
 
 - We rename a formal parameter `x` to `y`
@@ -1071,7 +1049,6 @@ What's wrong with these?
 <br>
 <br>
 
-
 ## Tricky Example Revisited
 
 <br>
@@ -1105,15 +1082,13 @@ To avoid getting confused,
 <br>
 <br>
 
-
-
 ## Normal Forms
 
 Recall **redex** is a $\lambda$-term of the form
 
 `((\x -> e1) e2)`
 
-A $\lambda$-term is in **normal form** if it *contains no redexes*.
+A $\lambda$-term is in **normal form** if it _contains no redexes_.
 
 <br>
 <br>
@@ -1160,30 +1135,27 @@ Which of the following term are **not** in _normal form_ ?
 <br>
 <br>
 
-
-
 ## Semantics: Evaluation
 
 A $\lambda$-term `e` **evaluates to** `e'` if
 
 1. There is a sequence of steps
+
 ```haskell
 e =?> e_1 =?> ... =?> e_N =?> e'
 ```
 
-   where each `=?>` is either `=a>` or `=b>`
-   and `N >= 0`
+where each `=?>` is either `=a>` or `=b>`
+and `N >= 0`
 
 2. `e'` is in _normal form_
 
-
 <br>
 <br>
 <br>
 <br>
 <br>
 <br>
-
 
 ## Examples of Evaluation
 
@@ -1235,7 +1207,6 @@ e =?> e_1 =?> ... =?> e_N =?> e'
 <br>
 <br>
 
-
 ## Elsa shortcuts
 
 Named $\lambda$-terms:
@@ -1261,7 +1232,7 @@ To substitute name with its definition, use a `=d>` step:
 Evaluation:
 
 - `e1 =*> e2`: `e1` reduces to `e2` in 0 or more steps
-    - where each step is `=a>`, `=b>`, or `=d>`
+  - where each step is `=a>`, `=b>`, or `=d>`
 - `e1 =~> e2`: `e1` evaluates to `e2` and `e2` is **in normal form**
 
 <br>
@@ -1304,7 +1275,6 @@ ELSA: https://goto.ucsd.edu/elsa/index.html
 
 [Click here to try this exercise](https://goto.ucsd.edu/elsa/index.html#?demo=permalink%2F1585434130_24421.lc)
 
-
 ## Non-Terminating Evaluation
 
 ```haskell
@@ -1313,7 +1283,7 @@ ELSA: https://goto.ucsd.edu/elsa/index.html
   =b> ((\x -> (x x)) (\x -> (x x)))
 ```
 
-Some programs loop back to themselves ... *never* reduce to a normal form!
+Some programs loop back to themselves ... _never_ reduce to a normal form!
 
 This combinator is called $\Omega$
 
@@ -1346,7 +1316,7 @@ Does this reduce to a normal form? Try it at home!
 
 ## Programming in $\lambda$-calculus
 
-*Real languages have lots of features*
+_Real languages have lots of features_
 
 - Booleans
 - Records (structs, tuples)
@@ -1357,7 +1327,6 @@ Does this reduce to a normal form? Try it at home!
 
 Lets see how to _encode_ all of these features
 with the $\lambda$-calculus.
-
 
 <br>
 <br>
@@ -1377,11 +1346,11 @@ with the $\lambda$-calculus.
 <br>
 <br>
 
-instead of                |  we write
-:-------------------------|:-------------------------
-`\x -> (\y -> (\z -> e))` | `\x -> \y -> \z -> e`
-`\x -> \y -> \z -> e`     | `\x y z -> e`
-`(((e1 e2) e3) e4)`       |  `e1 e2 e3 e4`
+| instead of                | we write              |
+| :------------------------ | :-------------------- |
+| `\x -> (\y -> (\z -> e))` | `\x -> \y -> \z -> e` |
+| `\x -> \y -> \z -> e`     | `\x y z -> e`         |
+| `(((e1 e2) e3) e4)`       | `e1 e2 e3 e4`         |
 
 <br>
 <br>
@@ -1429,10 +1398,9 @@ Well, what do we **do** with a Boolean `b`?
 <br>
 <br>
 
+Make a _binary choice_
 
-Make a *binary choice*
-
-  - `if b then e1 else e2`
+- `if b then e1 else e2`
 
 <br>
 <br>
@@ -1456,7 +1424,6 @@ ITE FALSE apple banana =~> banana
 ```
 
 (Here, `let NAME = e` means `NAME` is an _abbreviation_ for `e`)
-
 
 <br>
 <br>
@@ -1493,10 +1460,7 @@ let ITE   = \b x y -> b x y  -- Applies condition to branches
 <br>
 <br>
 
-
-
 ## Example: Branches step-by-step
-
 
 ```haskell
 eval ite_true:
@@ -1510,7 +1474,6 @@ eval ite_true:
   =b> e1
 ```
 
-
 <br>
 <br>
 <br>
@@ -1523,7 +1486,6 @@ eval ite_true:
 Now you try it!
 
 Can you [fill in the blanks to make it happen?][elsa-ite]
-
 
 (I) lecture
 
@@ -1550,7 +1512,6 @@ Can you [fill in the blanks to make it happen?][elsa-ite]
       =b> e2
     ```
 
-
 <br>
 <br>
 <br>
@@ -1563,9 +1524,6 @@ Can you [fill in the blanks to make it happen?][elsa-ite]
 <br>
 <br>
 <br>
-
-
-
 
 ## EXERCISE: Boolean Operators
 
@@ -1664,12 +1622,11 @@ eval ex_and_tt:
 
 Let's start with records with _two_ fields (aka **pairs**)
 
-What do we *do* with a pair?
+What do we _do_ with a pair?
 
 1. **Pack two** items into a pair, then
 2. **Get first** item, or
 3. **Get second** item.
-
 
 <br>
 <br>
@@ -1709,7 +1666,6 @@ eval ex_snd:
   SND (PAIR apple banana) =*> banana
 ```
 
-
 <br>
 <br>
 <br>
@@ -1722,7 +1678,6 @@ eval ex_snd:
 <br>
 <br>
 <br>
-
 
 ## Pairs: Implementation
 
@@ -1734,7 +1689,7 @@ let PAIR = \x y -> (\b -> ITE b x y)
 
 i.e. `PAIR x y` is a function that
 
-* takes a boolean and returns either `x` or `y`
+- takes a boolean and returns either `x` or `y`
 
 We can now implement `FST` and `SND` by "calling" the pair with `TRUE` or `FALSE`
 
@@ -1743,7 +1698,6 @@ let FST  = \p -> p TRUE   -- call w/ TRUE, get first value
 let SND  = \p -> p FALSE  -- call w/ FALSE, get second value
 ```
 
-
 <br>
 <br>
 <br>
@@ -1756,7 +1710,6 @@ let SND  = \p -> p FALSE  -- call w/ FALSE, get second value
 <br>
 <br>
 <br>
-
 
 ## EXERCISE: Triples
 
@@ -1795,7 +1748,6 @@ eval ex3:
     let SND3  = \t -> FST (SND t)
     let THD3  = \t -> SND (SND t)
     ```
-
 
 <br>
 <br>
@@ -1836,7 +1788,7 @@ eval ex3:
 
 Let's start with **natural numbers** (0, 1, 2, ...)
 
-What do we *do* with natural numbers?
+What do we _do_ with natural numbers?
 
 - Count: `0`, `inc`
 - Arithmetic: `dec`, `+`, `-`, `*`
@@ -1901,7 +1853,6 @@ let SIX   = \f x -> f (f (f (f (f (f x)))))
 ...
 ```
 
-
 <br>
 <br>
 <br>
@@ -1955,7 +1906,6 @@ Does this function look familiar?
 <br>
 <br>
 
-
 ## $\lambda$-calculus: Increment
 
 (I) lecture
@@ -1971,7 +1921,6 @@ Does this function look familiar?
     -- Call `f` on `x` one more time than `n` does
     let INC   = \n -> (\f x -> f (n f x))
     ```
-
 
 <br>
 <br>
@@ -2014,7 +1963,6 @@ eval inc_zero :
 
 Fill in the implementation of `ADD` so that you get the following behavior
 
-
 [Click here to try this exercise](https://goto.ucsd.edu/elsa/index.html#?demo=permalink%2F1585436042_24449.lc)
 
 ```haskell
@@ -2044,26 +1992,23 @@ eval add_two_zero:
   ADD TWO ZERO =~> TWO
 ```
 
-
 ## QUIZ
 
 How shall we implement `ADD`?
 
+**A.** `let ADD = \n m -> n INC m`
 
-**A.**  `let ADD = \n m -> n INC m`
+**B.** `let ADD = \n m -> INC n m`
 
-**B.**  `let ADD = \n m -> INC n m`
+**C.** `let ADD = \n m -> n m INC`
 
-**C.**  `let ADD = \n m -> n m INC`
+**D.** `let ADD = \n m -> n (m INC)`
 
-**D.**  `let ADD = \n m -> n (m INC)`
-
-**E.**  `let ADD = \n m -> n (INC m)`
+**E.** `let ADD = \n m -> n (INC m)`
 
 (I) final
 
     *Answer:* A
-
 
 <br>
 <br>
@@ -2079,7 +2024,6 @@ How shall we implement `ADD`?
 <br>
 
 $\lambda$-calculus: Addition
-
 
 ```haskell
 --  Call `f` on `x` exactly `n + m` times
@@ -2111,20 +2055,19 @@ eval add_one_zero :
 <br>
 <br>
 
-
 ## QUIZ
 
 How shall we implement `MULT`?
 
-**A.**  `let MULT = \n m -> n ADD m`
+**A.** `let MULT = \n m -> n ADD m`
 
-**B.**  `let MULT = \n m -> n (ADD m) ZERO`
+**B.** `let MULT = \n m -> n (ADD m) ZERO`
 
-**C.**  `let MULT = \n m -> m (ADD n) ZERO`
+**C.** `let MULT = \n m -> m (ADD n) ZERO`
 
-**D.**  `let MULT = \n m -> n (ADD m ZERO)`
+**D.** `let MULT = \n m -> n (ADD m ZERO)`
 
-**E.**  `let MULT = \n m -> (n ADD m) ZERO`
+**E.** `let MULT = \n m -> (n ADD m) ZERO`
 
 (I) final
 
@@ -2215,10 +2158,10 @@ A list with 4 elements
 CONS apple (CONS banana (CONS cantaloupe (CONS dragon NIL)))
 ```
 
-intuitively `CONS h t` creates a *new* list with
+intuitively `CONS h t` creates a _new_ list with
 
-- *head* `h`
-- *tail* `t`
+- _head_ `h`
+- _tail_ `t`
 
 **Destructing a list**
 
@@ -2276,14 +2219,13 @@ eval exTl
 <br>
 <br>
 
-
 ## EXERCISE: Nth
 
 Write an implementation of `GetNth` such that
 
--  `GetNth n l` returns the n-th element of the list `l`
+- `GetNth n l` returns the n-th element of the list `l`
 
-*Assume that `l` has n or more elements*
+_Assume that `l` has n or more elements_
 
 ```haskell
 let GetNth = ???
@@ -2311,7 +2253,6 @@ eval nth2 :
 <br>
 <br>
 <br>
-
 
 ## $\lambda$-calculus: Recursion
 
@@ -2349,7 +2290,7 @@ Can we write sum **using Church Numerals**?
 
 ## QUIZ
 
-You *can* write `SUM` using numerals but its *tedious*.
+You _can_ write `SUM` using numerals but its _tedious_.
 
 Is this a correct implementation of `SUM`?
 
@@ -2359,9 +2300,9 @@ let SUM = \n -> ITE (ISZ n)
             (ADD n (SUM (DEC n)))
 ```
 
-**A.**  Yes
+**A.** Yes
 
-**B.**  No
+**B.** No
 
 <br>
 <br>
@@ -2376,8 +2317,8 @@ let SUM = \n -> ITE (ISZ n)
 
 No!
 
-  * Named terms in Elsa are just syntactic sugar
-  * To translate an Elsa term to $\lambda$-calculus: replace each name with its definition
+- Named terms in Elsa are just syntactic sugar
+- To translate an Elsa term to $\lambda$-calculus: replace each name with its definition
 
 ```haskell
 \n -> ITE (ISZ n)
@@ -2390,16 +2331,16 @@ No!
 
 **Recursion:**
 
-- Inside *this* function
-- Want to call the *same* function on `DEC n`
+- Inside _this_ function
+- Want to call the _same_ function on `DEC n`
 
 <br>
 <br>
 
 Looks like we can't do recursion!
 
-- Requires being able to refer to functions *by name*,
-- But $\lambda$-calculus functions are *anonymous*.
+- Requires being able to refer to functions _by name_,
+- But $\lambda$-calculus functions are _anonymous_.
 
 Right?
 
@@ -2427,12 +2368,12 @@ Think again!
 
 Instead of
 
-- ~~Inside *this* function I want to call the *same* function on `DEC n`~~
+- ~~Inside _this_ function I want to call the _same_ function on `DEC n`~~
 
 Lets try
 
-- Inside *this* function I want to call *some* function `rec` on `DEC n`
-- And BTW, I want `rec` to be the *same* function
+- Inside _this_ function I want to call _some_ function `rec` on `DEC n`
+- And BTW, I want `rec` to be the _same_ function
 
 <br>
 <br>
@@ -2445,6 +2386,7 @@ let STEP =
                   ZERO
                   (ADD n (rec (DEC n))) -- Call some rec
 ```
+
 <br>
 <br>
 
@@ -2475,7 +2417,6 @@ MAGIC =*> STEP MAGIC
 
 ## $\lambda$-calculus: Fixpoint Combinator
 
-
 **Wanted:** a $\lambda$-term `FIX` such that
 
 - `FIX STEP` calls `STEP` with `FIX STEP` as the first argument:
@@ -2486,7 +2427,7 @@ MAGIC =*> STEP MAGIC
 
 <br>
 
-(In math: a *fixpoint* of a function $f(x)$ is a point $x$, such that $f(x) = x$)
+(In math: a _fixpoint_ of a function $f(x)$ is a point $x$, such that $f(x) = x$)
 
 <br>
 <br>
@@ -2547,7 +2488,7 @@ Remember $\Omega$?
 =b> (\x -> x x) (\x -> x x)
 ```
 
-This is *self-replcating code*! We need something like this but a bit more involved...
+This is _self-replcating code_! We need something like this but a bit more involved...
 
 <br>
 <br>
@@ -2559,6 +2500,7 @@ The Y combinator discovered by Haskell Curry:
 ```haskell
 let FIX   = \stp -> (\x -> stp (x x)) (\x -> stp (x x))
 ```
+
 <br>
 <br>
 
@@ -2584,5 +2526,4 @@ That's all folks, Haskell Curry was very clever.
 **Next week:** We'll look at the language named after him (`Haskell`)
 
 [elsa-ite]: http://goto.ucsd.edu:8095/index.html#?demo=ite.lc
-
 [elsa-not]: http://goto.ucsd.edu:8095/index.html#?demo=permalink%2F1491005489_149.lc

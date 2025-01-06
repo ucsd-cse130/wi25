@@ -1,9 +1,8 @@
 ---
 title: Hello, world!
 headerImg: sea.jpg
-date: 2024-01-05
+date: 2025-01-05
 ---
-
 
 ## A Programming Language
 
@@ -17,14 +16,12 @@ date: 2024-01-05
 - `x--`
 - `x = 0 ? L1 : L2`
 
-
 <br>
 <br>
 <br>
 <br>
 <br>
 <br>
-
 
 ## Example Program
 
@@ -36,7 +33,6 @@ L1: x++
     y = 0 ? L2 : L1
 L2: ...
 ```
-
 
 <br>
 <br>
@@ -71,14 +67,12 @@ But good luck writing
 > a different vision
 > of life.
 
-
 <br>
 <br>
 <br>
 <br>
 <br>
 <br>
-
 
 ## So Why Study Programming Languages?
 
@@ -94,38 +88,32 @@ Or more simply:
 
 Language affects how ideas and computation are expressed
 
-
 <br>
 <br>
 <br>
 <br>
 <br>
 <br>
-
-
 
 ## Course Goals
 
 ![130 Brain](/static/img/galaxy-brain-130.jpg){#fig:galaxy .align-center width=65%}
 
-
 <br>
 <br>
 <br>
 <br>
 <br>
 <br>
-
-
 
 ### New languages come (and go ...)
 
 There was no
 
-- Java        30 years ago
-- C#          25 years ago
-- Rust        15 years ago
-- WebAssembly  5 years ago
+- Java 30 years ago
+- C# 25 years ago
+- Rust 15 years ago
+- WebAssembly 5 years ago
 
 <br>
 <br>
@@ -160,14 +148,12 @@ There was no
 - What makes a programming language?
 - Which features are **fundamental** and which are **syntactic sugar**?
 
-
 <br>
 <br>
 <br>
 <br>
 <br>
 <br>
-
 
 ## Goal: Learn New Languages / Constructs
 
@@ -181,19 +167,12 @@ to create programs that are:
 - **Extendable**
 - **Reusable**
 
-
-
 <br>
 <br>
 <br>
 <br>
 <br>
 <br>
-
-
-
-
-
 
 ## Goal: How to Design new Languages
 
@@ -234,8 +213,6 @@ Yes.
 
 **My goal:** Educate tomorrow's leaders so you'll make **informed** choices.
 
-
-
 <br>
 <br>
 <br>
@@ -270,10 +247,6 @@ etc.
 
 - Research: Tools and Techniques to make programs better
 
-**Many thanks to for taking over in weeks 1-2!**
-
-**[Prof. Nadia Polikarpova](https://cseweb.ucsd.edu/~npolikarpova)
-
 <br>
 <br>
 <br>
@@ -287,15 +260,12 @@ etc.
 
 ### Teaching Assistants
 
-- [Matt Kolosick](mailto:mkolosick@ucsd.edu)
 - [Cole Kurashige](mailto:ckurashige@ucsd.edu)
-- [George Sakkas](mailto:gsakkas@ucsd.edu)
 
 ### Tutors
 
-- [Rana Lulla](mailto:rlulla@ucsd.edu)
-- [Matthew Peng](mailto:mapeng@ucsd.edu)
-- [Melody Ruth](mailto:maruth@ucsd.edu)
+- [Alexander Zhang](mailto:alz004@ucsd.edu)
+- [Ritoban Roy-Chowdhury](mailto:rroychowdhury@ucsd.edu)
 
 <br>
 <br>
@@ -313,11 +283,12 @@ etc.
 **Functional Programming**
 
 - Lambda calculus (2 weeks)
-- Haskell (6 weeks)
+- Functional Programming (4 weeks)
+- Building an Interpreter (3 weeks)
 
 **Logic Programming**
 
-- Prolog (2 weeks, maybe, but doubtful!)
+- Prolog (~1 weekx, maybe, but doubtful!)
 
 <br>
 <br>
@@ -351,8 +322,6 @@ void sort(int arr[], int beg, int end){
 }
 ```
 
-
-
 <br>
 <br>
 <br>
@@ -372,7 +341,6 @@ sort (x:xs) = sort ls ++ [x] ++ sort rs
 
 (**Note:** not a wholly [fair comparison...](http://stackoverflow.com/questions/7717691/why-is-the-minimalist-example-haskell-quicksort-not-a-true-quicksort))
 
-
 <br>
 <br>
 <br>
@@ -385,17 +353,16 @@ sort (x:xs) = sort ls ++ [x] ++ sort rs
 <br>
 <br>
 <br>
-
 
 ## Course Logistics
 
-[webpage](https://ucsd-cse130.github.io/wi24)
+[webpage](https://ucsd-cse130.github.io/wi25)
 
 - Calendar
 - Lecture notes
 - Programming assignments
 
-[piazza](https://piazza.com/class/lr1zj9yl963y9)
+[piazza](https://piazza.com/class/m5la9aqfdyl3db)
 
 - Go-to place if you have a question or need help
 
@@ -408,12 +375,11 @@ sort (x:xs) = sort ls ++ [x] ++ sort rs
 
 ## Grading
 
-- 5%  Class participation (clicker questions)
-- 25% Programming Assignments
-- 35% Two Midterm **Tu 1/30** and **Thu 2/22**
-- 35% Final       **Tu 3/19**
-- 05% Piazza Extra Credit
-  - To **top 20** best participants
+- 10% Class participation (_handouts_)
+- 30% Programming Assignments (_codespaces_)
+- 30% Two Midterm **Tu 1/28** and **Thu 2/20** (_in lecture_)
+- 30% Final **Tu 3/18**
+- 05% Piazza Extra Credit (_top 5_ best participants)
 
 <br>
 <br>
@@ -428,7 +394,7 @@ sort (x:xs) = sort ls ++ [x] ++ sort rs
 
 - Released [online](assignments.html)
 - At least a week before due date
-- Via github classroom
+- Via github classroom + codespaces
 
 **Six late days**
 
@@ -456,23 +422,20 @@ sort (x:xs) = sort ls ++ [x] ++ sort rs
 
 - The final is cumulative
 
-
 <br>
 <br>
 <br>
 <br>
 <br>
 <br>
-
-
-## Clickers
 
 <!--
+## Clickers
+
 Assigned Seating
 
 - From next lecture
 - See your [group](/static/raw/seating.txt) and [seat](https://ucsd-cse130.github.io/wi20/static/raw/Center_113_groups.pdf
--->
 
 Make class interactive
 
@@ -482,7 +445,6 @@ Not Optional
 
 - **Cheap** ones are fine
 - **Respond** to 75% questions
-
 
 <br>
 <br>
@@ -494,20 +456,23 @@ Not Optional
 ## Clicker Protocol
 
 1. **Solo Vote**
-    - Think for yourself, select answer
+
+   - Think for yourself, select answer
 
 2. **Discuss**
-    - Analyze problem in groups
-    - Reach consensus
-    - Have questions, raise your hand!
+
+   - Analyze problem in groups
+   - Reach consensus
+   - Have questions, raise your hand!
 
 3. **Group Vote**
-    - Everyone in group votes
-    - Hopefully the same way but not enforced
-    - You *don't have to answer correctly* to get points!
+
+   - Everyone in group votes
+   - Hopefully the same way but not enforced
+   - You _don't have to answer correctly_ to get points!
 
 4. **Class Discuss**
-    - What was easy or tricky?
+   - What was easy or tricky?
 
 <br>
 <br>
@@ -516,12 +481,13 @@ Not Optional
 <br>
 <b>
 
+-->
 
 ## Your Resources
 
 ### Discussion section
 
-- Friday 3:00-3:50pm (PCYNH 109)
+- Friday 3:00-3:50pm (PCYNH 106)
 
 ### Office hours
 
@@ -542,11 +508,6 @@ Not Optional
 <br>
 <br>
 
-
-
-
-
-
 ## Academic Integrity
 
 Programming assignments: do not copy from classmates or from previous years
@@ -557,14 +518,12 @@ Exams done **alone**
 - Offenders punished ruthlessly
 - Please see academic integrity statement
 
-
 <br>
 <br>
 <br>
 <br>
 <br>
 <br>
-
 
 ## Students with Disabilites
 
@@ -592,7 +551,7 @@ in advance so that accommodations may be arranged.
 
 - Create a diverse and inclusive learning environment
 - Where all students feel comfortable and can thrive.
-- *Please let us know* if there is a way to make you feel more included
+- _Please let us know_ if there is a way to make you feel more included
 - In person, via email/discussion boar
 
 ### Expectations
