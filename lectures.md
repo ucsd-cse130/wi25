@@ -8,7 +8,7 @@ The live-edited code for each lecture can be found [here][code].
 | **Date** | **Topic**           | **Notes**    |
 | :------- | :------------------ | :----------- |
 | 1/7      | Hello, World!       | [html][lec0] |
-| 1/9      | The Lambda Calculus | [html][lec1] |
+| 1/9      | The Lambda Calculus | [html][lec1] [pdf][pdf1] |
 
 <!--
 | 1/25       | A crash course in Haskell  | [html][lec2] [pdf][pdf2]  |
