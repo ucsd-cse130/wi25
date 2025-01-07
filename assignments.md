@@ -19,10 +19,10 @@ Fill in [this form](https://forms.gle/bVR7pfs5ajexNMr67) by **Fri 1/17**
 so we can link your github and UCSD IDs. Otherwise **you will get `0`**
 for the programming assignments!
 
-| **HW-link**                                      | **Name**        | **Deadline (23:59:59pm)** |
-| :----------------------------------------------- | :-------------- | :------------------------ |
-| [HW #00](https://forms.gle/bVR7pfs5ajexNMr67)    | Github ID       | Fri 1/17                  |
-| [HW #0](https://classroom.github.com/a/Swy1OtKG) | Lambda Calculus | Wed 1/22                  |
+| **HW-link**    | **Name**        | **Deadline (23:59:59pm)** |
+| :------------- | :-------------- | :------------------------ |
+| [HW #id][hwid] | Github ID       | Fri 1/17                  |
+| [HW #0][hw0]   | Lambda Calculus | Wed 1/22                  |
 
 <!--
 | [HW #1](https://classroom.github.com/a/HxgZyrDP) | Introduction to Haskell | Wed 2/7                    |
@@ -52,3 +52,6 @@ for a comparison between the two languages.
   [Final Sp 12](/static/raw/final-sp12.pdf),
   [Final Fa 11](/static/raw/final-fa11.pdf),
   [Final Wi 11](/static/raw/final-wi11.pdf).
+
+[hwid]: https://forms.gle/bVR7pfs5ajexNMr67
+[hw0]: https://classroom.github.com/a/Swy1OtKG
