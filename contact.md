@@ -11,13 +11,10 @@ headerImg: world-map.jpg
 
 ## Staff and Office Hours
 
-|              | **Staff**                                              | **Office Hours**          |
-| :----------- | :----------------------------------------------------- | :------------------------ |
-| _Instructor_ | [Ranjit Jhala](https://ranjitjhala.github.io)          | Tu 2:00-3:00pm, CSE B250A |
-| _TA_         | [Cole Kurashige](mailto:ckurashige@ucsd.edu)           | TBA                       |
-| _Tutor_      | [Alexander Zhang](mailto:alz004@ucsd.edu)              | TBA                       |
-| _Tutor_      | [Ritoban Roy-Chowdhury](mailto:rroychowdhury@ucsd.edu) | TBA                       |
+|              | **Staff**                                              | **Office Hours**           |
+| :----------- | :----------------------------------------------------- | :------------------------- |
+| _Instructor_ | [Ranjit Jhala](https://ranjitjhala.github.io)          | Tu, Th 2:00-3:00pm, (3110) |
+| _TA_         | [Cole Kurashige](mailto:ckurashige@ucsd.edu)           |                            | 
+| _Tutor_      | [Alexander Zhang](mailto:alz004@ucsd.edu)              | M 2:00-3:00pm (B250A), W 4:00-5:00pm (B270A) |
+| _Tutor_      | [Ritoban Roy-Chowdhury](mailto:rroychowdhury@ucsd.edu) | W 10:00-11:00 (B275), F 10:00 - 11:00 (B240A) |
 
-<!--
-For the office hours, you can [submit a ticket on autograder](https://autograder.ucsd.edu/queue/728).
--->
