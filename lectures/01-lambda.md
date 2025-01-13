@@ -706,7 +706,7 @@ We say that `(\x -> e1) e2` $\beta$-steps to `e1[x := e2]`
 =b> apple
 ```
 
-Is this right? Ask [Elsa](https://goto.ucsd.edu/elsa/index.html)
+Is this right? Ask [Elsa](https://elsa.goto.ucsd.edu/index.html)
 
 <br>
 <br>
@@ -837,9 +837,9 @@ fill_this_in apple
 =b> banana
 ```
 
-ELSA: https://goto.ucsd.edu/elsa/index.html
+ELSA: https://elsa.goto.ucsd.edu/index.html
 
-[Click here to try this exercise](https://goto.ucsd.edu/elsa/index.html#?demo=permalink%2F1585434473_24432.lc)
+[Click here to try this exercise](https://elsa.goto.ucsd.edu/index.html#?demo=permalink%2F1585434473_24432.lc)
 
 <br>
 <br>
@@ -1271,9 +1271,9 @@ eval ex3 :
   =*> orange
 ```
 
-ELSA: https://goto.ucsd.edu/elsa/index.html
+ELSA: https://elsa.goto.ucsd.edu/index.html
 
-[Click here to try this exercise](https://goto.ucsd.edu/elsa/index.html#?demo=permalink%2F1585434130_24421.lc)
+[Click here to try this exercise](https://elsa.goto.ucsd.edu/index.html#?demo=permalink%2F1585434130_24421.lc)
 
 ## Non-Terminating Evaluation
 
@@ -1527,8 +1527,8 @@ Can you [fill in the blanks to make it happen?][elsa-ite]
 
 ## EXERCISE: Boolean Operators
 
-ELSA: https://goto.ucsd.edu/elsa/index.html
-[Click here to try this exercise](https://goto.ucsd.edu/elsa/index.html#?demo=permalink%2F1585435168_24442.lc)
+ELSA: https://elsa.goto.ucsd.edu/index.html
+[Click here to try this exercise](https://elsa.goto.ucsd.edu/index.html#?demo=permalink%2F1585435168_24442.lc)
 
 Now that we have `ITE` it's easy to define other Boolean operators:
 
@@ -1715,9 +1715,10 @@ let SND  = \p -> p FALSE  -- call w/ FALSE, get second value
 
 How can we implement a record that contains **three** values?
 
-ELSA: https://goto.ucsd.edu/elsa/index.html
+ELSA: https://elsa.goto.ucsd.edu/index.html
 
-[Click here to try this exercise](https://goto.ucsd.edu/elsa/index.html#?demo=permalink%2F1585434814_24436.lc)
+
+[Click here to try this exercise](https://elsa.goto.ucsd.edu/index.html#?demo=permalink%2F1585434814_24436.lc)
 
 (I) lecture
 
@@ -1963,7 +1964,7 @@ eval inc_zero :
 
 Fill in the implementation of `ADD` so that you get the following behavior
 
-[Click here to try this exercise](https://goto.ucsd.edu/elsa/index.html#?demo=permalink%2F1585436042_24449.lc)
+[Click here to try this exercise](https://elsa.goto.ucsd.edu/index.html#?demo=permalink%2F1585436042_24449.lc)
 
 ```haskell
 let ZERO = \f x -> x
@@ -2243,7 +2244,7 @@ eval nth2 :
   =~> cantaloupe
 ```
 
-[Click here to try this in elsa](https://goto.ucsd.edu/elsa/index.html#?demo=permalink%2F1586466816_52273.lc)
+[Click here to try this in elsa](https://elsa.goto.ucsd.edu/index.html#?demo=permalink%2F1586466816_52273.lc)
 
 <br>
 <br>
@@ -2275,7 +2276,7 @@ eval exSum3: SUM THREE =~> SIX
 
 Can we write sum **using Church Numerals**?
 
-[Click here to try this in Elsa](https://goto.ucsd.edu/elsa/index.html#?demo=permalink%2F1586465192_52175.lc)
+[Click here to try this in Elsa](https://elsa.goto.ucsd.edu/index.html#?demo=permalink%2F1586465192_52175.lc)
 
 <br>
 <br>

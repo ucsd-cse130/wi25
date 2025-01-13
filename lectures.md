@@ -9,6 +9,8 @@ The live-edited code for each lecture can be found [here][code].
 | :------- | :------------------ | :----------- |
 | 1/7      | Hello, World!       | [html][lec0] |
 | 1/9      | The Lambda Calculus | [html][lec1] [pdf][pdf1] |
+| 1/14     | contd.              | [handout][wk2a]
+| 1/16     | contd.              | [handout][wk2b]
 
 <!--
 | 1/25       | A crash course in Haskell  | [html][lec2] [pdf][pdf2]  |
@@ -38,6 +40,8 @@ The live-edited code for each lecture can be found [here][code].
 | 3/11       | Final Review             | [pdf][discFinal] |
 -->
 
+[wk2a]: static/raw/130-handout-1-14.pdf
+[wk2b]: static/raw/130-handout-1-16.pdf
 [lec0]: lectures/00-hello.html
 [lec1]: lectures/01-lambda.html
 [lec2]: lectures/02-haskell.html
