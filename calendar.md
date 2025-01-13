@@ -5,7 +5,7 @@ headerImg: road.jpg
 
 ## Office Hours
 
-See CANVAS calendar for details
+See [office hours here](https://ucsd-cse130.github.io/wi25/contact.html)
 
 ## Calendar
 
