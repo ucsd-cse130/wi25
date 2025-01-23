@@ -11,9 +11,9 @@ The live-edited code for each lecture can be found [here][code].
 | 1/9      | The Lambda Calculus | [html][lec1] [pdf][pdf1] |
 | 1/14     | contd.              | [handout][wk2a]
 | 1/16     | contd.              | [handout][wk2b]
+| 1/23     | A crash course in Haskell  | [html][lec2] [handout][wk3b] |
 
 <!--
-| 1/25       | A crash course in Haskell  | [html][lec2] [pdf][pdf2]  |
 | 1/30       | **Midterm I**              |                           |
 | 2/6        | Datatypes & Recursion      | [html][lec3] [pdf][pdf3]  |
 | 2/15       | Higher Order Functions     | [html][lec4] [pdf][pdf4]   |
@@ -23,7 +23,6 @@ The live-edited code for each lecture can be found [here][code].
 | 3/12       | Type Classes & Functors    | [html][lec7] [html][lec8]  |
 | 3/14       | Monads & Hello, world!     | [html][lec9]               |
 | 3/19       | **Final**                  |                            |
-
 -->
 
 ## Discussions
@@ -42,6 +41,8 @@ The live-edited code for each lecture can be found [here][code].
 
 [wk2a]: static/raw/130-handout-1-14.pdf
 [wk2b]: static/raw/130-handout-1-16.pdf
+[wk3b]: static/raw/130-handout-1-23.pdf
+
 [lec0]: lectures/00-hello.html
 [lec1]: lectures/01-lambda.html
 [lec2]: lectures/02-haskell.html

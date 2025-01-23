@@ -37,13 +37,13 @@ Haskell = $\lambda$-calculus ++
     - lists
     - recursion
     - ...
-    
+
 <br>
 <br>
 <br>
 <br>
 <br>
-<br>    
+<br>
 
 ## Programming in Haskell
 
@@ -51,7 +51,7 @@ Haskell = $\lambda$-calculus ++
 
 <br>
 
-*Substituting equals by equals* 
+*Substituting equals by equals*
 
 <br>
 <br>
@@ -90,7 +90,7 @@ Haskell = $\lambda$-calculus ++
 
 ## Computation via Substituting Equals by Equals
 
-**Equality-Substitution** enables **Abstraction** via **Pattern Recognition** 
+**Equality-Substitution** enables **Abstraction** via **Pattern Recognition**
 
 
 <br>
@@ -117,16 +117,16 @@ Haskell = $\lambda$-calculus ++
 **Recognize Pattern as $\lambda$-function**
 
 ```
-pat = \x y z -> x  * ( y + z ) 
+pat = \x y z -> x  * ( y + z )
 ```
 
 **Equivalent Haskell Definition**
 
 ```
-pat   x y z =  x  * ( y + z ) 
+pat   x y z =  x  * ( y + z )
 ```
 
-**Function Call is Pattern Instance** 
+**Function Call is Pattern Instance**
 
 ```
 pat 31 42 56 =*> 31 * (42 + 56) =*> 31 * 98  =*> 3038
@@ -147,9 +147,9 @@ pat 90 68 12 =*> 90 * (68 + 12) =*> 90 * 80  =*> 7200
 <br>
 <br>
 
-## Programming in Haskell 
+## Programming in Haskell
 
-_Substitute Equals by Equals_ 
+_Substitute Equals by Equals_
 
 <br>
 <br>
@@ -198,7 +198,7 @@ weirdo = 1 0     -- rejected by GHC
 * Catches errors *early*
 * Allows compiler *to generate code*
 * Enables compiler *optimizations*
-  
+
 <br>
 <br>
 <br>
@@ -216,7 +216,7 @@ weirdo = 1 0     -- rejected by GHC
 
 - **Interactive Shell** `ghci` Shell to interactively run small programs [online](https://repl.it/languages/haskell)
 
-- **Build Tool** `stack` Build tool to manage libraries etc. 
+- **Build Tool** `stack` Build tool to manage libraries etc.
 
 <br>
 <br>
@@ -227,13 +227,13 @@ weirdo = 1 0     -- rejected by GHC
 <br>
 <br>
 
-## Interactive Shell: `ghci` 
+## Interactive Shell: `ghci`
 
 ```haskell
 $ stack ghci
 
 :load file.hs
-:type expression 
+:type expression
 :info variable
 ```
 
@@ -246,9 +246,9 @@ $ stack ghci
 <br>
 <br>
 
-## A Haskell Source File 
+## A Haskell Source File
 
-A sequence of **top-level definitions** `x1`, `x2`, ... 
+A sequence of **top-level definitions** `x1`, `x2`, ...
 
 - Each has *type* `type_1`, `type_2`, ...
 
@@ -286,13 +286,13 @@ ex1 = 31 * (42 + 56)   -- this is a comment
 ex2 :: Double
 ex2 = 3 * (4.2 + 5.6)  -- arithmetic operators "overloaded"
 
-ex3 :: Char 
+ex3 :: Char
 ex3 = 'a'              -- 'a', 'b', 'c', etc. built-in `Char` values
 
-ex4 :: Bool 
+ex4 :: Bool
 ex4 = True             -- True, False are builtin Bool values
 
-ex5 :: Bool 
+ex5 :: Bool
 ex5 = False
 ```
 
@@ -315,13 +315,13 @@ ex7 :: Int
 ex7 = 4 * 5
 
 ex8 :: Bool
-ex8 = 5 > 4 
+ex8 = 5 > 4
 
 quiz :: ???
 quiz = if ex8 then ex6 else ex7
 ```
 
-What is the *type* of `quiz`? 
+What is the *type* of `quiz`?
 
 **A.** `Int`
 
@@ -348,13 +348,13 @@ ex7 :: Int
 ex7 = 4 * 5
 
 ex8 :: Bool
-ex8 = 5 > 4 
+ex8 = 5 > 4
 
 quiz :: ???
 quiz = if ex8 then ex6 else ex7
 ```
 
-What is the *value* of `quiz`? 
+What is the *value* of `quiz`?
 
 **A.** `9`
 
@@ -374,15 +374,15 @@ What is the *value* of `quiz`?
 
 ## Function Types
 
-In Haskell, a **function is a value** that has a type 
+In Haskell, a **function is a value** that has a type
 
 ```
 A -> B
 ```
 
-A function that 
+A function that
 
-- takes *input* of type `A` 
+- takes *input* of type `A`
 - returns *output* of type `B`
 
 For example
@@ -413,11 +413,11 @@ isPos n = (x > 0)
 <br>
 
 
-## Multiple Argument Functions 
+## Multiple Argument Functions
 
-A function that 
+A function that
 
-- takes three _inputs_ `A1`, `A2` and `A3` 
+- takes three _inputs_ `A1`, `A2` and `A3`
 - returns one _output_ `B` has the type
 
 ```haskell
@@ -448,7 +448,7 @@ pat x y z = x * (y + z)
 <br>
 
 
-## QUIZ 
+## QUIZ
 
 What is the type of `quiz` ?
 
@@ -476,19 +476,19 @@ quiz x y = (x + y) > 0
 <br>
 <br>
 
-## Function Calls 
+## Function Calls
 
-A function call is _exactly_ like in the $\lambda$-calculus 
+A function call is _exactly_ like in the $\lambda$-calculus
 
 ```
 e1 e2
-``` 
+```
 
 where `e1` is a function and `e2` is the argument. For example
 
 ```haskell
 >>> isPos 12
-True 
+True
 
 >>> isPos (0 - 5)
 False
@@ -515,7 +515,7 @@ With multiple arguments, just pass them in one by one, e.g.
 For example
 
 ```haskell
->>> pat 31 42 56 
+>>> pat 31 42 56
 3038
 ```
 
@@ -530,7 +530,7 @@ For example
 <br>
 
 
-## EXERCISE 
+## EXERCISE
 
 Write a function `myMax` that returns the *maximum* of two inputs
 
@@ -559,9 +559,9 @@ When you are done you should see the following behavior:
 <br>
 
 
-## EXERCISE 
+## EXERCISE
 
-Write a function `sumTo` such that `sumTo n` evaluates to `0 + 1 + 2 + ... + n` 
+Write a function `sumTo` such that `sumTo n` evaluates to `0 + 1 + 2 + ... + n`
 
 ```haskell
 sumTo :: Int -> Int
@@ -572,9 +572,9 @@ When you are done you should see the following behavior:
 
 ```haskell
 >>> sumTo 3
-6 
+6
 >>> sumTo 4
-10 
+10
 >>> sumTo 5
 15
 ```
@@ -601,7 +601,7 @@ When you are done you should see the following behavior:
 <br>
 <br>
 
-## Tuples 
+## Tuples
 
 A type for packing `n` different kinds of values into a single "struct"
 
@@ -613,11 +613,11 @@ For example
 
 ```haskell
 tup1 :: ???
-tup1 = ('a', 5) 
+tup1 = ('a', 5)
 
 tup2 :: (Char, Double, Int)
-tup2 = ('a', 5.2, 7) 
-``` 
+tup2 = ('a', 5.2, 7)
+```
 
 <br>
 <br>
@@ -672,15 +672,15 @@ tup = (e1, e2, e3)
 
 ```haskell
 fst3 :: (t1, t2, t3) -> t1
-fst3 t = case t of 
+fst3 t = case t of
            (x1, x2, x3) -> x1
 
 snd3 :: (t1, t2, t3) -> t2
-snd3 t = case t of 
+snd3 t = case t of
            (x1, x2, x3) -> x2
 
 thd3 :: (t1, t2, t3) -> t3
-thd3 t = case t of 
+thd3 t = case t of
            (x1, x2, x3) -> x3
 ```
 
@@ -699,10 +699,10 @@ What is the value of `quiz` defined as
 
 ```haskell
 tup2 :: (Char, Double, Int)
-tup2 = ('a', 5.2, 7) 
+tup2 = ('a', 5.2, 7)
 
 snd3 :: (t1, t2, t3) -> t2
-snd3 t = case t of 
+snd3 t = case t of
            (x1, x2, x3) -> x2
 
 quiz = snd3 tup2
@@ -739,10 +739,10 @@ For example
 
 ```haskell
 chars :: [Char]
-chars = ['a', 'b', 'c'] 
+chars = ['a', 'b', 'c']
 
 ints :: [Int]
-ints = [1, 3, 5, 7] 
+ints = [1, 3, 5, 7]
 
 pairs :: [(Int, Bool)]
 pairs = [(1,True), (2,False)]
@@ -763,7 +763,7 @@ What is the type of `things` defined as
 
 ```haskell
 things :: ???
-things = [ [1], [2, 3], [4, 5, 6] ] 
+things = [ [1], [2, 3], [4, 5, 6] ]
 ```
 
 **A.** `[Int]`
@@ -816,8 +816,8 @@ There is no `T` that we can use
 There are two ways to construct lists
 
 ```haskell
-    []     -- creates an empty list 
-    h:t    -- creates a list with "head" 'h' and "tail" t 
+    []     -- creates an empty list
+    h:t    -- creates a list with "head" 'h' and "tail" t
 ```
 
 For example
@@ -826,10 +826,10 @@ For example
 >>> 3 : []
 [3]
 
->>> 2 : (3 : []) 
+>>> 2 : (3 : [])
 [2, 3]
 
->>> 1 : (2 : (3 : [])) 
+>>> 1 : (2 : (3 : []))
 [1, 2, 3]
 ```
 
@@ -854,9 +854,9 @@ Haskell lets you write `[x1, x2, x3, x4]` instead of `x1 : x2 : x3 : x4 : []`
 
 ## Functions Producing Lists
 
-Lets write a function `copy3` that 
+Lets write a function `copy3` that
 
-- takes an input `x` and 
+- takes an input `x` and
 - returns a list with _three_ copies of `x`
 
 ```haskell
@@ -908,8 +908,8 @@ When you are done, you should see the following
 
 ## PRACTICE: Clone
 
-Write a function `clone` such that 
-`clone n x` returns a list with `n` copies of `x`. 
+Write a function `clone` such that
+`clone n x` returns a list with `n` copies of `x`.
 
 
 
@@ -918,16 +918,16 @@ Write a function `clone` such that
 When you are done you should see the following behavior
 
 ```haskell
->>> clone 0 "cat" 
+>>> clone 0 "cat"
 []
 
->>> clone 1 "cat" 
+>>> clone 1 "cat"
 ["cat"]
 
->>> clone 2 "cat" 
+>>> clone 2 "cat"
 ["cat", "cat"]
 
->>> clone 3 "cat" 
+>>> clone 3 "cat"
 ["cat", "cat", "cat"]
 
 >>> clone 3 100
@@ -986,7 +986,7 @@ clone 3 100
 
 ## EXERCISE: Range
 
-Write a function `range` such that `range i j` 
+Write a function `range` such that `range i j`
 returns the list of values `[i, i+1, ..., j]`
 
 ```haskell
@@ -994,26 +994,26 @@ range :: ???
 range i j = ???
 ```
 
-**1. Tests** 
+**1. Tests**
 
 ```haskell
->>> range 4 3 
+>>> range 4 3
 []
 
->>> range 3 3 
+>>> range 3 3
 [3]
 
->>> range 2 3 
+>>> range 2 3
 [2, 3]
 
->>> range 1 3 
+>>> range 1 3
 [1, 2, 3]
 
->>> range 0 3 
+>>> range 0 3
 [0, 1, 2, 3]
 ```
 
-**2. Type** 
+**2. Type**
 
 ```haskell
 range :: ???
@@ -1060,14 +1060,14 @@ So far: how to *produce* lists.
 
 ## EXERCISE
 
-Lets write a function `firstElem` such that 
-`firstElem xs` returns the _first_ element 
+Lets write a function `firstElem` such that
+`firstElem xs` returns the _first_ element
 `xs` if it is a non-empty list, and `0` otherwise.
 
 **HINT:** How to _extract_ values from a list?
 
 
-**1. Tests** 
+**1. Tests**
 
 When you are done you should see the following behavior:
 
@@ -1078,16 +1078,16 @@ When you are done you should see the following behavior:
 >>> firstElem [10, 20, 30]
 10
 
->>> firstElem [5, 6, 7, 8] 
+>>> firstElem [5, 6, 7, 8]
 5
 ```
 
-**2. Type** 
+**2. Type**
 ```haskell
 firstElem :: ???
 ```
 
-**3. Code** 
+**3. Code**
 ```haskell
 firstElem = ???
 ```
@@ -1101,20 +1101,20 @@ firstElem = ???
 <br>
 <br>
 
-## QUIZ 
+## QUIZ
 
-Suppose we have the following `mystery` function 
+Suppose we have the following `mystery` function
 
 ```haskell
 mystery :: [a] -> Int
-mystery l = case l of 
+mystery l = case l of
               []     -> 0
               (x:xs) -> 1 + mystery xs
 ```
 
 What does `mystery [10, 20, 30]` evaluate to?
 
-**A.** `10` 
+**A.** `10`
 
 **B.** `20`
 
@@ -1135,7 +1135,7 @@ What does `mystery [10, 20, 30]` evaluate to?
 
 ## EXERCISE: Summing a List
 
-Write a function `sumList` such that `sumList [x1, ..., xn]` returns `x1 + ... + xn` 
+Write a function `sumList` such that `sumList [x1, ..., xn]` returns `x1 + ... + xn`
 
 **1. Tests**
 
@@ -1167,17 +1167,17 @@ sumList :: [Int] -> Int
 sumList = ???
 ```
 
-## Functions on lists: `take` 
+## Functions on lists: `take`
 
 Let's write a function to `take` first `n` elements of a list `xs`.
 
-**1. Tests** 
+**1. Tests**
 
 ```haskell
 -- >>> ???
 ```
 
-**2. Type** 
+**2. Type**
 
 ```haskell
 take :: ???
@@ -1248,13 +1248,12 @@ You can search for library functions on [Hoogle](https://www.haskell.org/hoogle/
 - Every _valid_ expression reduces to a _value_ (computed at run-time)
 
 
-**Execution** 
+**Execution**
 
-- Basic values & operators 
+- Basic values & operators
 
 - Execution / Function Calls just *substitute equals by equals*
 
 - Pack data into *tuples* & *lists*
 
 - Unpack data via *pattern-matching*
-
