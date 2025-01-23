@@ -3,6 +3,7 @@ title: Lecture Notes
 headerImg: books.jpg
 ---
 
+
 The live-edited code for each lecture can be found [here][code].
 
 | **Date** | **Topic**           | **Notes**    |
