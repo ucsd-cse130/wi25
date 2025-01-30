@@ -13,6 +13,7 @@ The live-edited code for each lecture can be found [here][code].
 | 1/14     | contd.              | [handout][wk2a]
 | 1/16     | contd.              | [handout][wk2b]
 | 1/23     | A crash course in Haskell  | [html][lec2] [handout][wk3b] |
+| 1/30     | contd.              | [handout][wk4b] |
 
 <!--
 | 1/30       | **Midterm I**              |                           |
@@ -43,6 +44,7 @@ The live-edited code for each lecture can be found [here][code].
 [wk2a]: static/raw/130-handout-1-14.pdf
 [wk2b]: static/raw/130-handout-1-16.pdf
 [wk3b]: static/raw/130-handout-1-23.pdf
+[wk4b]: static/raw/130-handout-1-30.pdf
 
 [lec0]: lectures/00-hello.html
 [lec1]: lectures/01-lambda.html
