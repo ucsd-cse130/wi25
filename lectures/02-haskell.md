@@ -817,7 +817,7 @@ There are two ways to construct lists
 
 ```haskell
     []     -- creates an empty list
-    h:t    -- creates a list with "head" 'h' and "tail" t
+    h:t    -- creates a list with "head" `h` and "tail" `t`
 ```
 
 For example
@@ -833,7 +833,7 @@ For example
 [1, 2, 3]
 ```
 
-**Cons Operator** `:` **is Right Associative**
+**Cons Operator `:` is Right Associative**
 
 `x1 : x2 : x3 : x4 : t` means `x1 : (x2 : (x3 : (x4 : t)))`
 
@@ -842,37 +842,6 @@ So we can just avoid the parentheses.
 **Syntactic Sugar**
 
 Haskell lets you write `[x1, x2, x3, x4]` instead of `x1 : x2 : x3 : x4 : []`
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-## Functions Producing Lists
-
-Lets write a function `copy3` that
-
-- takes an input `x` and
-- returns a list with _three_ copies of `x`
-
-```haskell
-copy3 :: ???
-copy3 x = ???
-```
-
-When you are done, you should see the following
-
-```haskell
->>> copy3 5
-[5, 5, 5]
-
->>> copy3 "cat"
-["cat", "cat", "cat"]
-```
 
 <br>
 <br>
@@ -906,11 +875,53 @@ When you are done, you should see the following
 <br>
 <br>
 
+
+## PRACTICE: Functions Producing Lists
+
+Lets write a function `copy3` that
+
+- takes an input `x` and
+- returns a list with _three_ copies of `x`
+
+**1. Tests**
+
+When you are done, you should see the following
+
+```haskell
+>>> copy3 5
+[5, 5, 5]
+
+>>> copy3 "cat"
+["cat", "cat", "cat"]
+```
+
+**2. Type**
+
+```haskell
+copy3 :: ???
+```
+
+**3. Code**
+
+```haskell
+copy3 = ???
+```
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
 ## PRACTICE: Clone
 
 Write a function `clone` such that
 `clone n x` returns a list with `n` copies of `x`.
-
 
 
 **1. Tests**
@@ -1213,31 +1224,6 @@ You can search for library functions on [Hoogle](https://www.haskell.org/hoogle/
 ```haskell
 take = ???
 ```
-
-## Some useful library functions
-
-```haskell
--- | Length of the list
-length :: [t] -> Int
-
--- | Append two lists
-(++) :: [t] -> [t] -> [t]
-
--- | Are two lists equal?
-(==) :: [t] -> [t] -> Bool
-```
-
-<br>
-
-You can search for library functions on [Hoogle](https://www.haskell.org/hoogle/)!
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
 
 ## Recap
 
