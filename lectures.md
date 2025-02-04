@@ -12,7 +12,7 @@ The live-edited code for each lecture can be found [here][code].
 | 1/9      | The Lambda Calculus | [html][lec1] [pdf][pdf1] |
 | 1/14     | contd.              | [handout][wk2a]
 | 1/16     | contd.              | [handout][wk2b]
-| 1/23     | A crash course in Haskell  | [html][lec2] [pdf2] [handout][wk3b] |
+| 1/23     | A crash course in Haskell  | [html][lec2] [pdf][pdf2] [handout][wk3b] |
 | 1/30     | contd.              | [handout][wk4b] |
 | 2/4      | Datatypes & Recursion  | [html][lec3] [handout][wk5a] |
 | 2/6      | contd.             | [handout][wk5b] |
