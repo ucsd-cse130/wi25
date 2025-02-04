@@ -16,6 +16,7 @@ The live-edited code for each lecture can be found [here][code].
 | 1/30     | contd.              | [handout][wk4b] |
 | 2/4      | Datatypes & Recursion  | [html][lec3] [handout][wk5a] |
 | 2/6      | contd.             | [handout][wk5b] |
+
 <!--
 | 1/30       | **Midterm I**              |                           |
 | 2/6        | Datatypes & Recursion      | [html][lec3] [pdf][pdf3]  |
