@@ -12,9 +12,10 @@ The live-edited code for each lecture can be found [here][code].
 | 1/9      | The Lambda Calculus | [html][lec1] [pdf][pdf1] |
 | 1/14     | contd.              | [handout][wk2a]
 | 1/16     | contd.              | [handout][wk2b]
-| 1/23     | A crash course in Haskell  | [html][lec2] [handout][wk3b] |
+| 1/23     | A crash course in Haskell  | [html][lec2] [pdf2] [handout][wk3b] |
 | 1/30     | contd.              | [handout][wk4b] |
-
+| 2/4      | Datatypes & Recursion  | [html][lec3] [handout][wk5a] |
+| 2/6      | contd.             | [handout][wk5b] |
 <!--
 | 1/30       | **Midterm I**              |                           |
 | 2/6        | Datatypes & Recursion      | [html][lec3] [pdf][pdf3]  |
@@ -45,6 +46,8 @@ The live-edited code for each lecture can be found [here][code].
 [wk2b]: static/raw/130-handout-1-16.pdf
 [wk3b]: static/raw/130-handout-1-23.pdf
 [wk4b]: static/raw/130-handout-1-30.pdf
+[wk5a]: static/raw/130-handout-2-4.pdf
+[wk5b]: static/raw/130-handout-2-6.pdf
 
 [lec0]: lectures/00-hello.html
 [lec1]: lectures/01-lambda.html
