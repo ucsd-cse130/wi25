@@ -70,7 +70,7 @@ The live-edited code for each lecture can be found [here][code].
 [pdf5]: /static/raw/05-environments.pdf
 [pdf6]: /static/raw/06-parsing.pdf
 [pdf8]: /static/raw/08-monads.pdf
-[code]: https://github.com/ucsd-cse130/wi24/tree/master/static/code/src
+[code]: https://github.com/ucsd-cse130/wi25/tree/master/static/code/src
 [arith]: https://github.com/ucsd-cse130/wi24/tree/main/static/arith
 [lc-1-12]: /static/raw/lec_1_12_21.lc
 [pdf-data]: /static/raw/03-datatypes.pdf
