@@ -24,7 +24,7 @@ for the programming assignments!
 | [HW #id][hwid] | Github ID       | Fri 1/17                  |
 | [HW #0][hw0]   | Lambda Calculus | Wed 1/22                  |
 | [HW #1][hw1]   | Intro to Haskell | Wed 2/5                  |
-| [HW #2][hw2]   | Data types      | Fri 2/16                  |
+| [HW #2][hw2]   | Data types      | Fri 2/14                  |
 
 <!--
 | [HW #3](https://classroom.github.com/a/MwGq0b-E) | Higher-order Functions  | Fri 3/1                    |
