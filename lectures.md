@@ -14,13 +14,15 @@ The live-edited code for each lecture can be found [here][code].
 | 1/16     | contd.              | [handout][wk2b]
 | 1/23     | A crash course in Haskell  | [html][lec2] [pdf][pdf2] [handout][wk3b] |
 | 1/30     | contd.              | [handout][wk4b] |
-| 2/4      | Datatypes & Recursion  | [html][lec3] [handout][wk5a] |
+| 2/4      | Datatypes & Recursion  | [html][lec3] [pdf][pdf3] [handout][wk5a] |
 | 2/6      | contd.             | [handout][wk5b] |
+| 2/11     | Higher Order Functions     | [html][lec4] [handout][wk6a]   |
+| 2/13     | contd.             | [handout][wk6b] |
+
 
 <!--
 | 1/30       | **Midterm I**              |                           |
 | 2/6        | Datatypes & Recursion      | [html][lec3] [pdf][pdf3]  |
-| 2/15       | Higher Order Functions     | [html][lec4] [pdf][pdf4]   |
 | 2/22       | **Midterm II**             |                            |
 | 2/27       | Environments & Closures    | [html][lec5] [pdf][pdf5]   |
 | 3/5        | Lexing and Parsing         | [html][lec6] [code][arith] |
@@ -49,6 +51,11 @@ The live-edited code for each lecture can be found [here][code].
 [wk4b]: static/raw/130-handout-1-30.pdf
 [wk5a]: static/raw/130-handout-2-4.pdf
 [wk5b]: static/raw/130-handout-2-6.pdf
+[wk6a]: static/raw/130-handout-2-11.pdf
+[wk6b]: static/raw/130-handout-2-13.pdf
+
+
+
 
 [lec0]: lectures/00-hello.html
 [lec1]: lectures/01-lambda.html

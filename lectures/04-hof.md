@@ -30,7 +30,7 @@ Pattern matching is a *very* old PL idea ...
 
 - Variants of LISP from 1970 by [Fred McBride](https://personal.cis.strath.ac.uk/conor.mcbride/FVMcB-PhD.pdf)
 
-... but now finally added to Python 3.10 in 2020 nearly **50 years later**
+... but added to Python 3.10 in 2020 nearly **50 years later**
 
 - https://www.python.org/dev/peps/pep-0622/
 
@@ -92,7 +92,7 @@ def make_point_3d(pt):
     - Base constructor -> Base case 
     - Inductive constructor -> Inductive case (with recursive call)
 
-- But it can get kinda repetitive!  
+- But it can get **repetitive**!  
 
 <br>
 <br>
