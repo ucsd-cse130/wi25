@@ -24,10 +24,10 @@ for the programming assignments!
 | [HW #id][hwid] | Github ID       | Fri 1/17                  |
 | [HW #0][hw0]   | Lambda Calculus | Wed 1/22                  |
 | [HW #1][hw1]   | Intro to Haskell | Wed 2/5                  |
-| [HW #2][hw2]   | Data types      | Fri 2/14                  |
+| [HW #2][hw2]   | Data types       | Fri 2/14                 |
+| [HW #3][hw3]   | Higher-order Functions | Fri 2/22           |
 
 <!--
-| [HW #3](https://classroom.github.com/a/MwGq0b-E) | Higher-order Functions  | Fri 3/1                    |
 | [HW #4](https://classroom.github.com/a/Nt-8s65U) | Interpreters            | Fri 3/15                   |
 | [HW #5](https://classroom.github.com/a/V1FEBmmq) | Classes                 | Fri 3/22                   |
 --->
@@ -57,4 +57,4 @@ for a comparison between the two languages.
 [hw0]: https://classroom.github.com/a/Swy1OtKG
 [hw1]: https://classroom.github.com/a/0ek-gbnL
 [hw2]: https://classroom.github.com/a/hw9LUEuc
-
+[hw3]: https://classroom.github.com/a/vtmNbvNf

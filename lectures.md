@@ -72,7 +72,7 @@ The live-edited code for each lecture can be found [here][code].
 [mapRed]: https://en.wikipedia.org/wiki/MapReduce
 [pdf1]: /static/raw/01-lambda.pdf
 [pdf2]: /static/raw/02-haskell.pdf
-[pdf3]: /static/raw/03-data.pdf
+[pdf3]: /static/raw/03-datatypes.pdf
 [pdf4]: /static/raw/04-hof.pdf
 [pdf5]: /static/raw/05-environments.pdf
 [pdf6]: /static/raw/06-parsing.pdf
