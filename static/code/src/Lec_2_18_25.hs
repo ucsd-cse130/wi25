@@ -2,13 +2,13 @@
 {-# HLINT ignore "Eta reduce" #-}
 {-# HLINT ignore "Avoid lambda" #-}
 {-# HLINT ignore "Use uncurry" #-}
+{-# HLINT ignore "Use foldr" #-}
+{-# LANGUAGE DeriveFunctor #-}
 
 module Lec_2_18_25  where
 
 import Prelude hiding (filter)
-import Debug.Trace
 import Data.Char
-import Data.Char (digitToInt)
 
 -- >>> evens []
 -- []
@@ -165,18 +165,44 @@ cat :: [String] -> String
 cat [] = ""
 cat (x:xs) = x ++ cat xs
 
+tot' = foldR (\x res -> x + res) 0
+cat' = foldR (\x res -> x ++ res) ""
+
+
+foldR :: (a -> b -> b) -> b -> [a] -> b
+foldR op b []     = b
+foldR op b (x:xs) = op x (foldR op b xs)
+
+
 
 {-
 
+foldR op b []     = b
+foldR op b (x:xs) = op x (foldR op b xs)
+
+foldR :: (T3 -> Tb -> Tb) -> Tb -> [T3] -> Tb
+
+foldR :: (a -> b -> b) -> b -> [a] -> b
+
+    x :: T3
+   xs :: [T3]
+  T_op:: T3 -> T_b -> T_b
+
+
+-- tod
 foo []     = 0
 foo (x:xs) = x + foo xs
 
 foo []     = ""
 foo (x:xs) = x ++ foo xs
 
+
 len []     = 0
 len (x:xs) = 1 + len xs
+
 -}
+
+
 len' :: [a] -> Int
 len' = collapse (\_ res -> 1 + res) 0
 
@@ -212,15 +238,215 @@ replace `op` with `++`, `b` with `""`
 x1 ++ (x2 ++ (x3 ++ (x4 ++ (x5 ++ ""))))
 
 
--}
-
-
-
 tot' xs = collapse (+) 0  xs
 
 cat' xs = collapse (++) "" xs
+
+
+-}
+
 
 bloop = (+)
 
 -- >>> bloop 10 20
 -- 30
+
+{-
+
+catTR ["carne", "asada", "burrito"]
+
+loop "" ["carne", "asada", "burrito"]
+==>
+loop ("" ++ "carne") ["asada", "burrito"]
+==>
+loop ("" ++ "carne" ++ "asada" ["burrito"]
+==>
+loop ("" ++ "carne" ++ "asada" ++ "burrito") []
+==>
+("" ++ "carne" ++ "asada" ++ "burrito")
+
+
+
+
+loop 0 (1:2:3:4:[])
+==>
+loop (0+1) (2:3:4:[])
+loop (0+1+2) (3:4:[])
+loop (0+1+2+3) (4:[])
+loop (0+1+2+3+4) ([])
+(0+1+2+3+4)
+
+
+not-tail-recursive
+
+tot (1:2:3:4:[])
+==>
+<1 + (tot (2:3:4:[])) >
+==>
+<1 + < 2 + tot (3:4:[]))> >
+==>
+<1 + < 2 + <3 + tot (4:[])> > >
+==>
+<1 + < 2 + <3 + <4 + (tot []) > > > >
+
+<1 + < 2 + <3 + <4 + 0 > > > >
+
+-}
+
+
+
+-- >>> catTR ["carne", "asada", "torta"]
+-- "carneasadatorta"
+
+
+-- >>> totTR [10, 20, 30]
+-- 60
+
+{-
+foo = loop 0
+  where
+    loop acc []     = acc
+    loop acc (x:xs) = loop (acc + x)  xs
+
+foo = loop ""
+  where
+    loop acc []     = acc
+    loop acc (x:xs) = loop (acc ++ x) xs
+
+totTR = foo (+) 0
+catTR = foo (++) ""
+
+foo op b = loop b
+  where
+    loop acc []     = acc
+    loop acc (x:xs) = loop (op acc x) xs
+
+
+-}
+-- acc := Int , x := Int, op :: Int -> Int -> Int
+-- >>> foldL (+) 0 [10,20,30]
+-- 60
+
+-- acc := String, x := String, op :: String -> String -> String
+-- >>> foldL (++) "" ["10", "carne", "this is a string"]
+-- "10carnethis is a string"
+
+-- acc := [Int], x := Int, op :: [Int] -> Int -> [Int]
+-- >>> foldL (\xs x -> x : xs) [] (1:2:3:[])
+-- [3,2,1]
+
+-- implement `map` , `filter` etc. using `foldl`
+
+foldL :: (acc -> x -> acc) -> acc -> [x] -> acc
+foldL op b = loop b
+  where
+    loop acc []     = acc
+    loop acc (x:xs) = loop (op acc x) xs
+
+{-
+
+
+
+
+foldL op b (x1: x2: x3: x4:[])
+==>
+loop b (x1: x2: x3: x4:[])
+==>
+loop (op b x1) (x2: x3: x4:[])
+==>
+loop (op (op b x1) x2) (x3: x4:[])
+==>
+loop (op (op (op b x1) x2) x3) (x4:[])
+==>
+loop (op (op (op (op b x1) x2) x3) x4) ([])
+==>
+((((b `op` x1) `op` x2) `op` x3) `op` x4)
+
+
+
+
+
+foldL (\xs x -> x : xs) [] (1:2:3:[])
+==>
+loop [] (1:2:3:[])                  <<< we know:  op =  (\xs x -> x : xs) >>>
+==>
+loop (op [] 1) (2:3:[])
+==>
+loop ((\xs x -> x : xs) [] 1) (2:3:[])
+==>
+loop ((1 : [])) (2:3:[])
+==>
+loop (2:(1 : [])) (3:[])
+==>
+loop (3:2:(1 : [])) ([])
+==>
+(3:2:(1:[]))
+
+
+
+-}
+
+
+
+-- totTR [] = 0
+-- totTR (x:xs) = x + tot xs
+
+-- catTR :: [String] -> String
+-- -- catTR [] = ""
+-- -- catTR (x:xs) = x ++ catTR xs
+
+
+data Tree a
+  = Leaf
+  | Node a (Tree a) (Tree a)
+  deriving (Functor, Show)
+
+tree0 = Node "cat"
+          (Node "mouse" Leaf Leaf)
+          (Node "giraffe" Leaf Leaf)
+
+tree1 = Node 3
+          (Node 5 Leaf Leaf)
+          (Node 7 Leaf Leaf)
+
+-- >>> fmap length tree0
+-- Node 3 (Node 5 Leaf Leaf) (Node 7 Leaf Leaf)
+
+treeSize :: Tree String -> Tree Int
+treeSize Leaf = Leaf
+treeSize (Node v l r) = Node (length v) (treeSize l) (treeSize r)
+
+
+-----
+
+type Value = Int
+
+type Id    = String
+
+data Bin = Add | Sub | Mul
+  deriving (Show)
+
+data Expr
+  = ENum Int
+  | EBin Bin Expr Expr
+  | EVar Id
+  deriving (Show)
+
+-- (4 + 12) - 5
+
+e0 :: Expr
+e0 = EBin Sub (EBin Add (ENum 4) (ENum 12)) (ENum 5)
+
+-- >>> eval e0
+-- 11
+
+eval :: Expr -> Value
+eval (ENum n)       = n
+eval (EBin o e1 e2) = evalOp o (eval e1) (eval e2)
+eval (EVar x)       = undefined
+
+
+evalOp :: Bin -> Value -> Value -> Value
+evalOp Add n1 n2 = n1 + n2
+evalOp Sub n1 n2 = n1 - n2
+evalOp Mul n1 n2 = n1 * n2
