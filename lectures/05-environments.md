@@ -6,7 +6,7 @@ headerImg: books.jpg
 
 ## Past three weeks
 
-How to *use* essential language constructs?
+How to _use_ essential language constructs?
 
 - Data Types
 - Recursion
@@ -14,7 +14,7 @@ How to *use* essential language constructs?
 
 ## Next two weeks
 
-How to *implement* language constructs?
+How to _implement_ language constructs?
 
 - Local variables and scope
 
@@ -24,11 +24,11 @@ How to *implement* language constructs?
 
 ### Interpreter
 
-How do we *represent* and *evaluate* a program?
+How do we _represent_ and _evaluate_ a program?
 
-<!-- 
+<!--
 - How do we *prove properties* about our interpreter
-  (e.g. that certain programs never crash)?  
+  (e.g. that certain programs never crash)?
   -->
 
 <br>
@@ -65,7 +65,7 @@ Features of Nano:
 
 ## 1. Nano: Arithmetic
 
-A *grammar* of arithmetic expressions:
+A _grammar_ of arithmetic expressions:
 
 ```haskell
 e ::= n
@@ -76,11 +76,11 @@ e ::= n
 
 <br>
 
-| **Expressions** |       | **Values**  |
-|:----------------|:------|:------------|
-| `4`             | `==>` | 4           |
-| `4 + 12`        | `==>` | 16          |
-| `(4+12) - 5`    | `==>` | 11          |
+| **Expressions** |       | **Values** |
+| :-------------- | :---- | :--------- |
+| `4`             | `==>` | 4          |
+| `4 + 12`        | `==>` | 16         |
+| `(4+12) - 5`    | `==>` | 11         |
 
 <br>
 <br>
@@ -89,7 +89,7 @@ e ::= n
 
 ![](/static/img/trinity.png){#fig:types .align-center width=60%}
 
-Lets *represent* arithmetic expressions as type
+Lets _represent_ arithmetic expressions as type
 
 ```haskell
 data Expr
@@ -99,7 +99,7 @@ data Expr
   | EMul Expr Expr   -- ^ e1 * e2
 ```
 
-Lets *represent* arithmetic values as a type
+Lets _represent_ arithmetic values as a type
 
 ```haskell
 type Value = Int
@@ -110,12 +110,11 @@ type Value = Int
 <br>
 <br>
 
-
 ## Evaluating Arithmetic Expressions
 
 ![](/static/img/trinity.png){#fig:types .align-center width=60%}
 
-We can now write a Haskell function to  *evaluate* an expression:
+We can now write a Haskell function to _evaluate_ an expression:
 
 ```haskell
 eval :: Expr -> Value
@@ -136,7 +135,7 @@ eval (EMul e1 e2) = eval e1 * eval e2
 
 ## Alternative representation
 
-Lets pull the *operators* into a separate type
+Lets pull the _operators_ into a separate type
 
 ```haskell
 data Binop = Add                  -- ^ `+`
@@ -190,7 +189,7 @@ What is a suitable type for `evalOp`?
 
 Features of Nano:
 
-1. Arithmetic *[done]*
+1. Arithmetic _[done]_
 2. **Variables**
 3. Let-bindings
 4. Functions
@@ -228,14 +227,14 @@ type Id = String
 
 data Expr
   = ENum Int             -- OLD
-  | EBin Binop Expr Expr  
+  | EBin Binop Expr Expr
                          -- NEW
   | EVar Id              -- variables
 ```
 
 <br>
 
-## QUIZ 
+## QUIZ
 
 What should the following expression evaluate to?
 
@@ -263,13 +262,13 @@ x + 1
 
 An expression is evaluated in an **environment**
 
-- A **phone book** which maps *variables* to *values*
+- A **phone book** which maps _variables_ to _values_
 
 ```haskell
 [ "x" := 0, "y" := 12, ...]
 ```
 
-A type for *environments*
+A type for _environments_
 
 ```haskell
 type Env = [(Id, Value)]
@@ -293,9 +292,9 @@ to mean
 
 When `expr` is **evaluated in environment** `env` the result is `value`
 
-So: when we have variables, we modify our evaluator (`eval`) 
+So: when we have variables, we modify our evaluator (`eval`)
 
-- to take an input  environment `env` in which `expr` must be evaluated.
+- to take an input environment `env` in which `expr` must be evaluated.
 
 ```haskell
 eval :: Env -> Expr -> Value
@@ -442,8 +441,8 @@ envE = ["y" := 10, "z" := 666, "x" := 9  ]
 
 Features of Nano:
 
-1. Arithmetic expressions *[done]*
-2. Variables              *[done]*
+1. Arithmetic expressions _[done]_
+2. Variables _[done]_
 3. **Let-bindings**
 4. Functions
 5. Recursion
@@ -481,7 +480,7 @@ type Id = String
 
 data Expr
   = ENum Int              -- OLD
-  | EBin Binop Expr Expr  
+  | EBin Binop Expr Expr
   | EVar Id
                          -- NEW
   | ELet Id Expr Expr
@@ -509,17 +508,15 @@ How should we extend `eval` ?
 <br>
 <br>
 
-
 ## QUIZ
 
-What *should* the following expression evaluate to?
+What _should_ the following expression evaluate to?
 
 ```haskell
 let x = 0
 in
   x + 1
 ```
-
 
 **(A)** Error
 
@@ -539,7 +536,7 @@ in
 
 ## QUIZ
 
-What *should* the following expression evaluate to?
+What _should_ the following expression evaluate to?
 
 ```haskell
 let x = 0
@@ -569,11 +566,9 @@ in
 <br>
 <br>
 
-
-
 ## QUIZ
 
-What *should* the following expression evaluate to?
+What _should_ the following expression evaluate to?
 
 ```haskell
 let x = 0
@@ -605,7 +600,7 @@ in
 
 ## QUIZ
 
-What *should* the following expression evaluate to?
+What _should_ the following expression evaluate to?
 
 ```haskell
 let x = 0
@@ -640,17 +635,17 @@ in
 
 ## Principle: Static/Lexical Scoping
 
-Every variable *use* gets its value from a unique *definition*:
+Every variable _use_ gets its value from a unique _definition_:
 
-- "Nearest" `let`-binder in program *text*
+- "Nearest" `let`-binder in program _text_
 
-**Static** means you can tell *without running the program*
+**Static** means you can tell _without running the program_
 
 Great for readability and debugging
 
-1. Define *local* variables
+1. Define _local_ variables
 
-2. Be sure *where* each variable got its value
+2. Be sure _where_ each variable got its value
 
 Don’t have to scratch head to figure where a variable got "assigned"
 
@@ -794,7 +789,7 @@ eval env (ELet x e1 e2) = ???
 
 2. **Extend** environment with value for `x` i.e. to `(x := v1) : env`
 
-3. **Evaluate** `e2` using *extended* environment.
+3. **Evaluate** `e2` using _extended_ environment.
 
 <br>
 <br>
@@ -816,7 +811,7 @@ Lets make sure our tests pass!
 
 ## Run-time Errors
 
-Haskell function to *evaluate* an expression:
+Haskell function to _evaluate_ an expression:
 
 ```haskell
 eval :: Env -> Expr -> Value
@@ -825,7 +820,7 @@ eval env (Var x)        = lookup x env      -- (A)
 eval env (Bin op e1 e2) = evalOp op v1 v2   -- (B)
   where
     v1                  = eval env  e1      -- (C)
-    v2                  = eval env  e2      -- (C) 
+    v2                  = eval env  e2      -- (C)
 eval env (Let x e1 e2)  = eval env1 e2
   where
     v1                  = eval env e1
@@ -834,14 +829,13 @@ eval env (Let x e1 e2)  = eval env1 e2
 
 ## QUIZ
 
-Will `eval env expr` always return a `value` ? Or, can it *crash*?
+Will `eval env expr` always return a `value` ? Or, can it _crash_?
 
 **(A)** operation at `A` may fail
 **(B)** operation at `B` may fail
 **(C)** operation at `C` may fail
 **(D)** operation at `D` may fail
 **(E)** nah, its all good..., always returns a `Value`
-
 
 <br>
 <br>
@@ -927,7 +921,7 @@ in
 (I) final
 
     *Answer:* B
-    
+
 <br>
 <br>
 <br>
@@ -946,7 +940,7 @@ Consider the function
 evaluate :: Expr -> Value
 evaluate e
   | isOk e    = eval emptyEnv e
-  | otherwise = error "Sorry! bad expression, it will crash `eval`!"  
+  | otherwise = error "Sorry! bad expression, it will crash `eval`!"
   where
     emptyEnv  = []               -- has NO bindings
 ```
@@ -973,14 +967,13 @@ What should `isOk` check for? (Try to implement it for `nano`...)
 
 Features of Nano:
 
-1. Arithmetic expressions *[done]*
-2. Variables              *[done]*
-3. Let-bindings           *[done]*
+1. Arithmetic expressions _[done]_
+2. Variables _[done]_
+3. Let-bindings _[done]_
 4. **Functions**
 5. Recursion
 
 ![](/static/img/trinity.png){#fig:types .align-center width=60%}
-
 
 <br>
 <br>
@@ -1001,9 +994,9 @@ Features of Nano:
 
 Let's add
 
-- *lambda abstraction* (aka function definitions)
+- _lambda abstraction_ (aka function definitions)
 
-- *application* (aka function calls)
+- _application_ (aka function calls)
 
 ```haskell
 e ::= n                   -- OLD
@@ -1042,13 +1035,12 @@ in
 <br>
 <br>
 
-
 ## Representation
 
 ```haskell
 data Expr
   = ENum Int              -- OLD
-  | EBin Binop Expr Expr  
+  | EBin Binop Expr Expr
   | EVar Id
   | ELet Id Expr Expr
                          -- NEW
@@ -1075,13 +1067,12 @@ data Expr
 <br>
 <br>
 
-
 ## Representation
 
 ```haskell
 data Expr
   = ENum Int              -- OLD
-  | EBin Binop Expr Expr  
+  | EBin Binop Expr Expr
   | EVar Id
   | ELet Id Expr Expr
                          -- NEW
@@ -1121,9 +1112,6 @@ ELet "incr" (ELam "x" (EBin Add (EVar "x") (ENum 1)))
 <br>
 <br>
 
-
-
-
 ## Functions are Values
 
 Recall the trinity
@@ -1145,7 +1133,7 @@ Lets build some intuition with examples.
 <br>
 <br>
 
-## QUIZ 
+## QUIZ
 
 What does the following expression evaluate to?
 
@@ -1184,7 +1172,7 @@ in
 
 - Is it a ???
 
-**What information** do we need to store (in the `Env`) about `incr`? 
+**What information** do we need to store (in the `Env`) about `incr`?
 
 <br>
 <br>
@@ -1389,7 +1377,7 @@ Why?
 10
 ```
 
-Oh no! How to find the bug? Is it 
+Oh no! How to find the bug? Is it
 
 - In `myFunc` or
 - In a global variable or
@@ -1400,11 +1388,11 @@ Oh no! How to find the bug? Is it
 
 [Colbert "Immutability Principle"](https://youtu.be/CWqzLgDc030?t=628)
 
-<!-- 
-The greatest thing about this man is that he’s steady. 
-You know where he stands.  He believes the same thing 
-Wednesday that he believed on Monday — no matter what 
-happened Tuesday. 
+<!--
+The greatest thing about this man is that he’s steady.
+You know where he stands.  He believes the same thing
+Wednesday that he believed on Monday — no matter what
+happened Tuesday.
 -->
 
 <br>
@@ -1489,7 +1477,7 @@ How to enforce immutability principle
 **At definition:**
 _Freeze_ the environment the function's value
 
-**At call:** 
+**At call:**
 Use the _frozen_ environment to evaluate the _body_
 
 Ensures that `inc 10` _always_ evaluates to the _same_ result!
@@ -1499,7 +1487,7 @@ Ensures that `inc 10` _always_ evaluates to the _same_ result!
 let c = 1
 in                   -- ["c" := 1]
  let inc = \x -> x + c
- in                  -- ["inc" := <frozenv, x, x+c>, c := 1]  
+ in                  -- ["inc" := <frozenv, x, x+c>, c := 1]
                      -- where frozenv = ["c" := 1]
    let c = 100
    in                -- ["c" := 100, "inc" := <frozenv, x, x+c>, "c" := 1]
@@ -1538,7 +1526,7 @@ Lets change the `Value` datatype to also store an `Env`
 ```haskell
 data Value
   = VInt  Int          -- OLD
-  | VClos Env Id Expr  -- <frozenv, param, body>  
+  | VClos Env Id Expr  -- <frozenv, param, body>
 ```
 
 <br>
@@ -1586,21 +1574,20 @@ eval env (EApp e1 e2) = ???
 
 <br>
 
-**Hint:** What value should we _evaluate_ `incr 10` to? 
+**Hint:** What value should we _evaluate_ `incr 10` to?
 
-1. Evaluate `incr`  to get `<frozenv, "x", x + c>`
-2. Evaluate `10`    to get `10`
+1. Evaluate `incr` to get `<frozenv, "x", x + c>`
+2. Evaluate `10` to get `10`
 3. Evaluate `x + c` in ` x:=10 : frozenv`
 
-<br> 
+<br>
 
 Let's generalize that recipe!
 
-1. Evaluate `e1`   to get `<frozenv, param, body>`
-2. Evaluate `e2`   to get `v2`
+1. Evaluate `e1` to get `<frozenv, param, body>`
+2. Evaluate `e2` to get `v2`
 3. Evaluate `body` in `param := v2 : frozenv`
 
-
 <br>
 <br>
 <br>
@@ -1611,7 +1598,6 @@ Let's generalize that recipe!
 <br>
 <br>
 <br>
-
 
 ## Immutability Achieved
 
@@ -1633,7 +1619,6 @@ exLam3 = ELet "c" (ENum 1)
 -- ???
 ```
 
-
 <br>
 <br>
 <br>
@@ -1645,8 +1630,7 @@ exLam3 = ELet "c" (ENum 1)
 <br>
 <br>
 
-
-## QUIZ 
+## QUIZ
 
 What should the following evaluate to?
 
@@ -1656,7 +1640,7 @@ in
   let add10 = add 10
   in
     let add20 = add 20
-    in 
+    in
       (add10 100) + (add20 1000)
 ```
 
@@ -1670,8 +1654,6 @@ in
 
 **E.** `1140`
 
-
-
 <br>
 <br>
 <br>
@@ -1682,8 +1664,6 @@ in
 <br>
 <br>
 <br>
-
-
 
 ## Functions Returning Functions Achieved!
 
@@ -1693,7 +1673,6 @@ exLam4 = ...
 -- >>> eval [] exLam4
 ```
 
-
 <br>
 <br>
 <br>
@@ -1704,9 +1683,6 @@ exLam4 = ...
 <br>
 <br>
 <br>
-
-
-
 
 ## Practice
 
@@ -1722,8 +1698,6 @@ in
       doTwice add10 100
 ```
 
-
-
 <br>
 <br>
 <br>
@@ -1734,8 +1708,6 @@ in
 <br>
 <br>
 <br>
-
-
 
 ## Functions Accepting Functions Achieved!
 
@@ -1745,7 +1717,6 @@ exLam5 = ...
 -- >>> eval [] exLam4
 ```
 
-
 <br>
 <br>
 <br>
@@ -1756,8 +1727,6 @@ exLam5 = ...
 <br>
 <br>
 <br>
-
-
 
 ## The Nano Language
 
@@ -1765,10 +1734,10 @@ exLam5 = ...
 
 Features of Nano:
 
-1. Arithmetic expressions *[done]*
-2. Variables              *[done]*
-3. Let-bindings           *[done]*
-4. Functions              *[done]*
+1. Arithmetic expressions _[done]_
+2. Variables _[done]_
+3. Let-bindings _[done]_
+4. Functions _[done]_
 5. **Recursion**
 
 ... You figure it out **Hw4** ... :-)

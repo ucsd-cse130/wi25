@@ -6,31 +6,26 @@ headerImg: books.jpg
 
 The live-edited code for each lecture can be found [here][code].
 
-| **Date** | **Topic**           | **Notes**    |
-| :------- | :------------------ | :----------- |
-| 1/7      | Hello, World!       | [html][lec0] |
-| 1/9      | The Lambda Calculus | [html][lec1] [pdf][pdf1] |
-| 1/14     | contd.              | [handout][wk2a]
-| 1/16     | contd.              | [handout][wk2b]
+| **Date** | **Topic**                  | **Notes**    |
+| :------- | :------------------------- | :----------- |
+| 1/7      | Hello, World!              | [html][lec0] |
+| 1/9      | The Lambda Calculus        | [html][lec1] [pdf][pdf1] |
+| 1/14     | contd.                     | [handout][wk2a]
+| 1/16     | contd.                     | [handout][wk2b]
 | 1/23     | A crash course in Haskell  | [html][lec2] [pdf][pdf2] [handout][wk3b] |
-| 1/28     | Midterm I           |      |  
-| 1/30     | contd.              | [handout][wk4b] |
-| 2/4      | Datatypes & Recursion  | [html][lec3] [pdf][pdf3] [handout][wk5a] |
-| 2/6      | contd.             | [handout][wk5b] |
+| 1/28     | Midterm I                  |      |  
+| 1/30     | contd.                     | [handout][wk4b] |
+| 2/4      | Datatypes & Recursion      | [html][lec3] [pdf][pdf3] [handout][wk5a] |
+| 2/6      | contd.                     | [handout][wk5b] |
 | 2/11     | Higher Order Functions     | [html][lec4] [handout][wk6a]   |
-| 2/13     | contd.             | [handout][wk6b] |
+| 2/13     | contd.                     | [handout][wk6b] |
 | 2/18     | Environments & Closures    | [html][lec5]  |
 | 2/20     | Midterm II                 | |  
-
-
+| 2/25     | contd.                     | [handout][wk8a] |
+| 2/27     | Lexing and Parsing         | [html][lec6] [code][arith] [handout][wk8b] |
 
 <!--
-| 1/30       | **Midterm I**              |                           |
-| 2/6        | Datatypes & Recursion      | [html][lec3] [pdf][pdf3]  |
-| 2/22       | **Midterm II**             |                            |
-| 2/27       | Environments & Closures    | [html][lec5] [pdf][pdf5]   |
 | 3/5        | Lexing and Parsing         | [html][lec6] [code][arith] |
-
 | 3/12       | Type Classes & Functors    | [html][lec7] [html][lec8]  |
 | 3/14       | Monads & Hello, world!     | [html][lec9]               |
 | 3/19       | **Final**                  |                            |
@@ -58,6 +53,8 @@ The live-edited code for each lecture can be found [here][code].
 [wk5b]: static/raw/130-handout-2-6.pdf
 [wk6a]: static/raw/130-handout-2-11.pdf
 [wk6b]: static/raw/130-handout-2-13.pdf
+[wk8a]: static/raw/130-handout-2-25.pdf
+[wk8b]: static/raw/130-handout-2-27.pdf
 
 
 

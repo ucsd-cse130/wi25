@@ -247,9 +247,9 @@ if (window.navigator.appName == "Microsoft Internet Explorer") {
 </ul>
 <h3 id="interpreter">Interpreter</h3>
 <p>How do we <em>represent</em> and <em>evaluate</em> a program?</p>
-<!-- 
+<!--
 - How do we *prove properties* about our interpreter
-  (e.g. that certain programs never crash)?  
+  (e.g. that certain programs never crash)?
   -->
 <p><br>
 <br>
@@ -412,7 +412,7 @@ if (window.navigator.appName == "Microsoft Internet Explorer") {
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="kw">data</span> <span class="dt">Expr</span></span>
 <span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  <span class="ot">=</span> <span class="dt">ENum</span> <span class="dt">Int</span>             <span class="co">-- OLD</span></span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>  <span class="op">|</span> <span class="dt">EBin</span> <span class="dt">Binop</span> <span class="dt">Expr</span> <span class="dt">Expr</span>  </span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>  <span class="op">|</span> <span class="dt">EBin</span> <span class="dt">Binop</span> <span class="dt">Expr</span> <span class="dt">Expr</span></span>
 <span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>                         <span class="co">-- NEW</span></span>
 <span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>  <span class="op">|</span> <span class="dt">EVar</span> <span class="dt">Id</span>              <span class="co">-- variables</span></span></code></pre></div>
 <p><br></p>
@@ -588,7 +588,7 @@ to handle variables i.e. the <code class="sourceCode haskell"><span class="dt">
 <span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="kw">data</span> <span class="dt">Expr</span></span>
 <span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>  <span class="ot">=</span> <span class="dt">ENum</span> <span class="dt">Int</span>              <span class="co">-- OLD</span></span>
-<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>  <span class="op">|</span> <span class="dt">EBin</span> <span class="dt">Binop</span> <span class="dt">Expr</span> <span class="dt">Expr</span>  </span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>  <span class="op">|</span> <span class="dt">EBin</span> <span class="dt">Binop</span> <span class="dt">Expr</span> <span class="dt">Expr</span></span>
 <span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>  <span class="op">|</span> <span class="dt">EVar</span> <span class="dt">Id</span></span>
 <span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a>                         <span class="co">-- NEW</span></span>
 <span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a>  <span class="op">|</span> <span class="dt">ELet</span> <span class="dt">Id</span> <span class="dt">Expr</span> <span class="dt">Expr</span></span></code></pre></div>
@@ -833,7 +833,7 @@ to handle variables i.e. the <code class="sourceCode haskell"><span class="dt">
 <span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a>eval env (<span class="dt">Bin</span> op e1 e2) <span class="ot">=</span> evalOp op v1 v2   <span class="co">-- (B)</span></span>
 <span id="cb30-5"><a href="#cb30-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">where</span></span>
 <span id="cb30-6"><a href="#cb30-6" aria-hidden="true" tabindex="-1"></a>    v1                  <span class="ot">=</span> eval env  e1      <span class="co">-- (C)</span></span>
-<span id="cb30-7"><a href="#cb30-7" aria-hidden="true" tabindex="-1"></a>    v2                  <span class="ot">=</span> eval env  e2      <span class="co">-- (C) </span></span>
+<span id="cb30-7"><a href="#cb30-7" aria-hidden="true" tabindex="-1"></a>    v2                  <span class="ot">=</span> eval env  e2      <span class="co">-- (C)</span></span>
 <span id="cb30-8"><a href="#cb30-8" aria-hidden="true" tabindex="-1"></a>eval env (<span class="dt">Let</span> x e1 e2)  <span class="ot">=</span> eval env1 e2</span>
 <span id="cb30-9"><a href="#cb30-9" aria-hidden="true" tabindex="-1"></a>  <span class="kw">where</span></span>
 <span id="cb30-10"><a href="#cb30-10" aria-hidden="true" tabindex="-1"></a>    v1                  <span class="ot">=</span> eval env e1</span>
@@ -918,7 +918,7 @@ to handle variables i.e. the <code class="sourceCode haskell"><span class="dt">
 <div class="sourceCode" id="cb32"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="ot">evaluate ::</span> <span class="dt">Expr</span> <span class="ot">-&gt;</span> <span class="dt">Value</span></span>
 <span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>evaluate e</span>
 <span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>  <span class="op">|</span> isOk e    <span class="ot">=</span> eval emptyEnv e</span>
-<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a>  <span class="op">|</span> <span class="fu">otherwise</span> <span class="ot">=</span> <span class="fu">error</span> <span class="st">&quot;Sorry! bad expression, it will crash `eval`!&quot;</span>  </span>
+<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a>  <span class="op">|</span> <span class="fu">otherwise</span> <span class="ot">=</span> <span class="fu">error</span> <span class="st">&quot;Sorry! bad expression, it will crash `eval`!&quot;</span></span>
 <span id="cb32-5"><a href="#cb32-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">where</span></span>
 <span id="cb32-6"><a href="#cb32-6" aria-hidden="true" tabindex="-1"></a>    emptyEnv  <span class="ot">=</span> []               <span class="co">-- has NO bindings</span></span></code></pre></div>
 <p>What should <code class="sourceCode haskell">isOk</code> check for? (Try to implement it for <code class="sourceCode haskell">nano</code>…)</p>
@@ -999,7 +999,7 @@ to handle variables i.e. the <code class="sourceCode haskell"><span class="dt">
 <h2 id="representation">Representation</h2>
 <div class="sourceCode" id="cb35"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="kw">data</span> <span class="dt">Expr</span></span>
 <span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>  <span class="ot">=</span> <span class="dt">ENum</span> <span class="dt">Int</span>              <span class="co">-- OLD</span></span>
-<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a>  <span class="op">|</span> <span class="dt">EBin</span> <span class="dt">Binop</span> <span class="dt">Expr</span> <span class="dt">Expr</span>  </span>
+<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a>  <span class="op">|</span> <span class="dt">EBin</span> <span class="dt">Binop</span> <span class="dt">Expr</span> <span class="dt">Expr</span></span>
 <span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a>  <span class="op">|</span> <span class="dt">EVar</span> <span class="dt">Id</span></span>
 <span id="cb35-5"><a href="#cb35-5" aria-hidden="true" tabindex="-1"></a>  <span class="op">|</span> <span class="dt">ELet</span> <span class="dt">Id</span> <span class="dt">Expr</span> <span class="dt">Expr</span></span>
 <span id="cb35-6"><a href="#cb35-6" aria-hidden="true" tabindex="-1"></a>                         <span class="co">-- NEW</span></span>
@@ -1026,7 +1026,7 @@ to handle variables i.e. the <code class="sourceCode haskell"><span class="dt">
 <h2 id="representation-1">Representation</h2>
 <div class="sourceCode" id="cb36"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="kw">data</span> <span class="dt">Expr</span></span>
 <span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>  <span class="ot">=</span> <span class="dt">ENum</span> <span class="dt">Int</span>              <span class="co">-- OLD</span></span>
-<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a>  <span class="op">|</span> <span class="dt">EBin</span> <span class="dt">Binop</span> <span class="dt">Expr</span> <span class="dt">Expr</span>  </span>
+<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a>  <span class="op">|</span> <span class="dt">EBin</span> <span class="dt">Binop</span> <span class="dt">Expr</span> <span class="dt">Expr</span></span>
 <span id="cb36-4"><a href="#cb36-4" aria-hidden="true" tabindex="-1"></a>  <span class="op">|</span> <span class="dt">EVar</span> <span class="dt">Id</span></span>
 <span id="cb36-5"><a href="#cb36-5" aria-hidden="true" tabindex="-1"></a>  <span class="op">|</span> <span class="dt">ELet</span> <span class="dt">Id</span> <span class="dt">Expr</span> <span class="dt">Expr</span></span>
 <span id="cb36-6"><a href="#cb36-6" aria-hidden="true" tabindex="-1"></a>                         <span class="co">-- NEW</span></span>
@@ -1254,11 +1254,11 @@ to handle variables i.e. the <code class="sourceCode haskell"><span class="dt">
 </ul>
 <p><strong>My worst debugging nightmare</strong></p>
 <p><a href="https://youtu.be/CWqzLgDc030?t=628">Colbert “Immutability Principle”</a></p>
-<!-- 
-The greatest thing about this man is that he’s steady. 
-You know where he stands.  He believes the same thing 
-Wednesday that he believed on Monday — no matter what 
-happened Tuesday. 
+<!--
+The greatest thing about this man is that he’s steady.
+You know where he stands.  He believes the same thing
+Wednesday that he believed on Monday — no matter what
+happened Tuesday.
 -->
 <p><br>
 <br>
@@ -1329,7 +1329,7 @@ Use the <em>frozen</em> environment to evaluate the <em>body</em></p>
 <span id="cb52-2"><a href="#cb52-2" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> c <span class="ot">=</span> <span class="dv">1</span></span>
 <span id="cb52-3"><a href="#cb52-3" aria-hidden="true" tabindex="-1"></a><span class="kw">in</span>                   <span class="co">-- [&quot;c&quot; := 1]</span></span>
 <span id="cb52-4"><a href="#cb52-4" aria-hidden="true" tabindex="-1"></a> <span class="kw">let</span> inc <span class="ot">=</span> \x <span class="ot">-&gt;</span> x <span class="op">+</span> c</span>
-<span id="cb52-5"><a href="#cb52-5" aria-hidden="true" tabindex="-1"></a> <span class="kw">in</span>                  <span class="co">-- [&quot;inc&quot; := &lt;frozenv, x, x+c&gt;, c := 1]  </span></span>
+<span id="cb52-5"><a href="#cb52-5" aria-hidden="true" tabindex="-1"></a> <span class="kw">in</span>                  <span class="co">-- [&quot;inc&quot; := &lt;frozenv, x, x+c&gt;, c := 1]</span></span>
 <span id="cb52-6"><a href="#cb52-6" aria-hidden="true" tabindex="-1"></a>                     <span class="co">-- where frozenv = [&quot;c&quot; := 1]</span></span>
 <span id="cb52-7"><a href="#cb52-7" aria-hidden="true" tabindex="-1"></a>   <span class="kw">let</span> c <span class="ot">=</span> <span class="dv">100</span></span>
 <span id="cb52-8"><a href="#cb52-8" aria-hidden="true" tabindex="-1"></a>   <span class="kw">in</span>                <span class="co">-- [&quot;c&quot; := 100, &quot;inc&quot; := &lt;frozenv, x, x+c&gt;, &quot;c&quot; := 1]</span></span>
@@ -1357,7 +1357,7 @@ Use the <em>frozen</em> environment to evaluate the <em>body</em></p>
 <p>Lets change the <code class="sourceCode haskell"><span class="dt">Value</span></code> datatype to also store an <code class="sourceCode haskell"><span class="dt">Env</span></code></p>
 <div class="sourceCode" id="cb54"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="kw">data</span> <span class="dt">Value</span></span>
 <span id="cb54-2"><a href="#cb54-2" aria-hidden="true" tabindex="-1"></a>  <span class="ot">=</span> <span class="dt">VInt</span>  <span class="dt">Int</span>          <span class="co">-- OLD</span></span>
-<span id="cb54-3"><a href="#cb54-3" aria-hidden="true" tabindex="-1"></a>  <span class="op">|</span> <span class="dt">VClos</span> <span class="dt">Env</span> <span class="dt">Id</span> <span class="dt">Expr</span>  <span class="co">-- &lt;frozenv, param, body&gt;  </span></span></code></pre></div>
+<span id="cb54-3"><a href="#cb54-3" aria-hidden="true" tabindex="-1"></a>  <span class="op">|</span> <span class="dt">VClos</span> <span class="dt">Env</span> <span class="dt">Id</span> <span class="dt">Expr</span>  <span class="co">-- &lt;frozenv, param, body&gt;</span></span></code></pre></div>
 <p><br>
 <br>
 <br>
@@ -1440,7 +1440,7 @@ Use the <em>frozen</em> environment to evaluate the <em>body</em></p>
 <span id="cb58-3"><a href="#cb58-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> add10 <span class="ot">=</span> add <span class="dv">10</span></span>
 <span id="cb58-4"><a href="#cb58-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">in</span></span>
 <span id="cb58-5"><a href="#cb58-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span> add20 <span class="ot">=</span> add <span class="dv">20</span></span>
-<span id="cb58-6"><a href="#cb58-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">in</span> </span>
+<span id="cb58-6"><a href="#cb58-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">in</span></span>
 <span id="cb58-7"><a href="#cb58-7" aria-hidden="true" tabindex="-1"></a>      (add10 <span class="dv">100</span>) <span class="op">+</span> (add20 <span class="dv">1000</span>)</span></code></pre></div>
 <p><strong>A.</strong> <code class="sourceCode haskell"><span class="dv">1100</span></code></p>
 <p><strong>B.</strong> <code class="sourceCode haskell"><span class="dv">1110</span></code></p>
