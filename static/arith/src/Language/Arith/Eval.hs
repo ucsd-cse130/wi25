@@ -11,7 +11,8 @@ module Language.Arith.Eval
   -- * Convert string to AST
   , parse
   -- * Convert string to Tokens
-  , tokens)
+  , tokens
+  )
   where
 
 import Control.Exception (catch)
@@ -90,7 +91,7 @@ evalExpr = eval
 -- APlus (AVar "x") (AVar "y")
 --
 -- >>> parse "10 - 2 - 2"
--- AMinus (AMinus (AConst 10) (AConst 2)) (AConst 2)
+-- AMinus (AConst 10) (AMinus (AConst 2) (AConst 2))
 --
 -- >>> parse "2 + 10 * 3"
 -- APlus (AConst 2) (AMul (AConst 10) (AConst 3))
