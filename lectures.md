@@ -22,7 +22,9 @@ The live-edited code for each lecture can be found [here][code].
 | 2/18     | Environments & Closures    | [html][lec5]  |
 | 2/20     | Midterm II                 | |  
 | 2/25     | contd.                     | [handout][wk8a] |
-| 2/27     | Lexing and Parsing         | [html][lec6] [code][arith] [handout][wk8b] |
+| 2/27     | contd.                     | [handout][wk8b] |
+| 3/4      | Lexing and Parsing         | [html][lec6] [code][arith] [handout][wk9a] |
+| 3/6      | Type Classes & Functors    | [html][lec7] [html][lec8]  [handout][wk9b] |
 
 <!--
 | 3/12       | Type Classes & Functors    | [html][lec7] [html][lec8]  |
@@ -54,6 +56,9 @@ The live-edited code for each lecture can be found [here][code].
 [wk6b]: static/raw/130-handout-2-13.pdf
 [wk8a]: static/raw/130-handout-2-25.pdf
 [wk8b]: static/raw/130-handout-2-27.pdf
+[wk9a]: static/raw/130-handout-3-4.pdf
+[wk9b]: static/raw/130-handout-3-6.pdf
+
 
 
 
