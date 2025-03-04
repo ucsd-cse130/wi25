@@ -25,9 +25,9 @@ type Env = [(Id, Int)]
 
 type Value = Int
 
--- $alpha stuff* 
+-- $alpha stuff*
 
--- re1 re2 
+-- re1 re2
 
 
 -- (x + y) * 2
@@ -37,6 +37,11 @@ expxy2 = AMul (APlus (AVar "x") (AVar "y")) (AConst 2)
 -- >>> eval [ ("y", 20)] expxy2
 -- Error {errMsg = "Unbound variable x"}
 
+-- >>> eval [] (AMinus (APlus (AConst 10) (AConst 20)) (AVar "z"))
+-- Error {errMsg = "Unbound variable z"}
+
+-- >>> (read "(7, 9, 12)") :: (Int, Int, Int)
+-- (7,9,12)
 
 eval :: Env -> Aexpr -> Value
 eval _   (AConst i)     = i

@@ -34,39 +34,60 @@ runFile f = do
 exitError :: Error -> IO ()
 exitError (Error msg) = putStrLn ("Error: " ++ msg)
 
--- re+ = re re re re re re
--- let add = (\x -> (\y -> x + y)) in ((add 10) 20)
 
--- (((f x) y) z)    CORRECT
+-- >>> parseTokens "90027zig 007"
+-- Right [NUM (AlexPn 0 1 1) 90027,ID (AlexPn 5 1 6) "zig",NUM (AlexPn 9 1 10) 7]
 
--- (f (x (y z)))    WRONG
+
+
+-- >>> parseTokens "10 + 20 - z00"
+-- Right [NUM (AlexPn 0 1 1) 10,PLUS (AlexPn 3 1 4),NUM (AlexPn 5 1 6) 20,MINUS (AlexPn 8 1 9),ID (AlexPn 10 1 11) "z00"]
+
+-- >>> parse "10 - 2 - 2"
+-- >>> evalString [] "10 - 2 - 2"
+-- AMinus (AMinus (AConst 10) (AConst 2)) (AConst 2)
+-- 6
+
+-- >>> evalString [] "2 * 5 + 5"
+-- 15
+
+
+-- [  NUM (AlexPn 0 1 1) 10,
+--    PLUS (AlexPn 3 1 4),
+--    NUM (AlexPn 5 1 6) 20,
+--    MINUS (AlexPn 8 1 9),
+--    ID (AlexPn 10 1 11) "z"
+-- ]
+
+
+
+-- ==> [Num 10, Plus, Num 20, Minus, Id "z"]
+
+-- >>> evalString [("z", 100)] "10 + 20 - z"
+-- -70
+
+
+
+
 
 
 -- >>> parseAexpr "(2)+9"
--- APlus (AConst 2) (AConst 9)
 
 -- >>> evalString [] "10 * 2 + 1"
--- 21
 
 
 -- >>> parseAexpr "(1 + (2 + (3 + (4 + 5)))))"
--- APlus (AConst 1) (APlus (AConst 2) (APlus (AConst 3) (APlus (AConst 4) (AConst 5))))
 
 -- >>> parseAexpr "+ + + "
--- Error {errMsg = "parse error:PLUS (AlexPn 0 1 1)"}
 
 
 -- >>> parseTokens "20000z987"
--- Right [NUM (AlexPn 0 1 1) 20000,ID (AlexPn 5 1 6) "z987"]
 
 -- >>> parseTokens "+"
--- Right [PLUS (AlexPn 0 1 1)]
 
 -- >>> parseTokens "z"
--- Right [ID (AlexPn 0 1 1) "z"]
 
 -- >>> parseAexpr "(x + y + 100)/2000"
--- ADiv (APlus (AVar "x") (APlus (AVar "y") (AConst 100))) (AConst 2000)
 
 --------------------------------------------------------------------------------
 evalString :: Env -> String -> Value

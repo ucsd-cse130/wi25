@@ -34,7 +34,7 @@ tokens :-
   \(                            { \p _ -> LPAREN p }
   \)                            { \p _ -> RPAREN p }
   $alpha [$alpha $digit \_ \']* { \p s -> ID     p s }
-  $digit+                       { \p s -> NUM p (read s) }
+  (0-9)+                        { \p s -> NUM p (read s) }
   0x $hex+                      { \p s -> NUM p (read s) }
 
   ------------------------------------------------------------------------------
