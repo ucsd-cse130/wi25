@@ -27,10 +27,8 @@ for the programming assignments!
 | [HW #2][hw2]   | Data types       | Fri 2/14                 |
 | [HW #3][hw3]   | Higher-order Functions | Fri 2/22           |
 | [HW #4][hw4]   | Interpreters     | Fri 3/7                  |
+| [HW #5][hw5]   | Classes          | Fri 3/21                 |
 
-<!--
-| [HW #5](https://classroom.github.com/a/V1FEBmmq) | Classes                 | Fri 3/22                   |
---->
 
 ## Sample Exam Questions
 
@@ -59,4 +57,4 @@ for a comparison between the two languages.
 [hw2]: https://classroom.github.com/a/hw9LUEuc
 [hw3]: https://classroom.github.com/a/vtmNbvNf
 [hw4]: https://classroom.github.com/a/xeUtlYau
-
+[hw5]: https://classroom.github.com/a/NFd-YU8c
