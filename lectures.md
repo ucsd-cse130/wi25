@@ -25,8 +25,8 @@ The live-edited code for each lecture can be found [here][code].
 | 2/27     | contd.                     | [handout][wk8b] |
 | 3/4      | Lexing and Parsing         | [html][lec6] [pdf][pdf6] [code][arith] [handout][wk9a] |
 | 3/6      | Type Classes               | [html][lec7] [html][lec8]  [handout][wk9b] |
-| 3/11     | Functors & Monads          | [html][lec7] [html][lec8]  |
-| 3/13     | Hello, world! (finally!)   | [html][lec9]               |
+| 3/11     | Functors & Monads          | [html][lec7] [html][lec8]  [handout][wk10a] |
+| 3/13     | Hello, world! (finally!)   | [html][lec9]               [handout][wk10b] |
 
 ## Discussions
 
@@ -54,7 +54,8 @@ The live-edited code for each lecture can be found [here][code].
 [wk8b]: static/raw/130-handout-2-27.pdf
 [wk9a]: static/raw/130-handout-3-4.pdf
 [wk9b]: static/raw/130-handout-3-6.pdf
-
+[wk10a]: static/raw/130-handout-3-11.pdf
+[wk10b]: static/raw/130-handout-3-13.pdf
 
 
 
