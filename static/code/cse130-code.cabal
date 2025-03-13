@@ -28,6 +28,7 @@ library
       Lec_2_25_25
       Lec_3_6_25
       Lec_3_11_25
+      Lec_3_13_25
 
   hs-source-dirs:
       src
